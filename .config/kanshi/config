@@ -1,0 +1,10 @@
+{
+  output eDP-1 enable mode 1920x1080@60.008Hz position 0,0
+}
+
+{
+  output "Samsung Electric Company U28E590 HTPH402827" mode 3840x2160@60.000Hz position 0,0
+  output eDP-1 enable mode 1920x1080@60.008Hz position 0,2160
+}
+
+

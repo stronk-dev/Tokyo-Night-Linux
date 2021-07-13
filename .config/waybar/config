@@ -1,0 +1,122 @@
+{
+    "layer": "top",
+    "position": "top",
+    "modules-left": ["sway/workspaces", "sway/mode", "sway/window"],
+    "modules-center": ["clock"],
+    "modules-right": ["custom/recorder", "tray", "pulseaudio", "backlight", "temperature", "custom/cpu_speed", "battery", "network", "custom/powermenu"],
+    "sway/mode": {
+        "format": " {}"
+    },
+    "sway/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": false,
+        "disable-markup": false,
+        "format": "{icon}",
+        "format-icons": {
+            "1": "1 <span font='Font Awesome 5 Free 11'></span>",
+            "2": "2 <span font='Font Awesome 5 Free 11'></span>",
+            "3": "3 <span font='Font Awesome 5 Free 11'></span>",
+            "4": "4 <span font='Font Awesome 5 Free 11'></span>",
+            "5": "5 <span font='Font Awesome 5 Free 11'></span>",
+            "6": "6 <span font='Font Awesome 5 Free 11'></span>",
+            "7": "6 <span font='Font Awesome 5 Free 11'></span>",
+            "8": "6 <span font='Font Awesome 5 Free 11'></span>"
+        }
+    },
+    "tray": {
+        "icon-size": 20,
+        "spacing": 10
+    },
+    "sway/window": {
+        "max-length": 60,
+        "tooltip": false
+        // "format": "( {} )"
+    },
+    "clock": {
+        "format": "{:%a %d %b - %H:%M}",
+        "tooltip": false,
+        "on-click": "gnome-calendar"
+    },
+    "custom/cpu_speed": {
+        "interval": 10,
+        "return-type": "json",
+        "exec": "~/.config/waybar/modules/cpu_speed.sh",
+        "format": "<span font='Font Awesome 5 Free 11'>{icon}</span>  {}",
+        "format-icons": [""],
+        "escape": true,
+        "on-click": "urxvt -e htop"
+    },
+    "custom/powermenu": {
+        "return-type": "json",
+        "exec": "~/.config/waybar/modules/powermenu.sh",
+        "format": "<span font='Font Awesome 5 Free 9'>{icon}</span>  {}",
+        "format-icons": [""],
+        "interval": 3600,
+        "escape": true,
+        "on-click": "home/marco/.config/wofi/wofi-power.sh"
+    },
+    "custom/recorder": {
+		"format": "",
+		"return-type": "json",
+		"interval": 4,
+		"exec": "echo '{\"class\": \"recording\"}'",
+		"exec-if": "pgrep wf-recorder"
+	},
+    "battery": {
+        "format": "<span font='Font Awesome 5 Free 11'>{icon}</span>  {capacity}% - {time}",
+        "format-icons": ["", "", "", "", ""],
+        "format-time": "{H}h{M}m",
+        "format-charging": "<span font='Font Awesome 5 Free'></span>  <span font='Font Awesome 5 Free 11'>{icon}</span>  {capacity}% - {time}",
+        "format-full": "<span font='Font Awesome 5 Free'></span>  <span font='Font Awesome 5 Free 11'>{icon}</span>  Charged",
+        "interval": 30,
+        "states": {
+            "warning": 25,
+            "critical": 10
+        },
+        "tooltip": false
+    },
+    "network": {
+        "format": "{icon}",
+        "format-alt": "{ipaddr}/{cidr} {icon}",
+        "format-alt-click": "click-right",
+        "format-wifi": "<span font='Font Awesome 5 Free 10'></span>  {essid} ({signalStrength}%)",
+        "format-ethernet": " {ifname}",
+        "format-disconnected": "⚠ Disconnected",
+        "on-click": "urxvt -e /home/marco/sway/scripts/network-manager",
+        "tooltip": false
+    },
+    "pulseaudio": {
+        "format": "<span font='Font Awesome 5 Free 11'>{icon:2}</span> {volume:4}%",
+        "format-alt": "<span font='Font Awesome 5 Free 11'>{icon:2}</span> {volume:4}%",
+        "format-alt-click": "click-right",
+        "format-muted": "<span font='Font Awesome 5 Free 11'></span>",
+        "format-icons": {
+            "phone": [" ", " ", " ", " "],
+            "default": ["", "", "", ""]
+        },
+        "scroll-step": 2,
+        "on-click": "pavucontrol",
+        "tooltip": false
+    },
+    "backlight": {
+        "format": "{icon}",
+        "format-alt": "{percent}% {icon}",
+        "format-alt-click": "click-right",
+        "format-icons": ["", ""],
+        "on-scroll-up": "light -A 1",
+        "on-scroll-down": "light -U 1"
+    },
+    "temperature": {
+        "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+        "critical-threshold": 75,
+        "interval": 5,
+        "format": "{icon} {temperatureC}°",
+        "format-icons": [
+            "", // Icon: temperature-empty
+            "", // Icon: temperature-quarter
+            "", // Icon: temperature-half
+            "", // Icon: temperature-three-quarters
+            ""  // Icon: temperature-full
+        ]
+    }
+}

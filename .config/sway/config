@@ -1,0 +1,354 @@
+#########     Configuration    #########
+###           the easy stuff         ###
+
+    # Key to do all the things (Mod1=Alt, Mod4=Super/Windows)
+        set $mod Mod4
+
+    # Home row direction keys, like vim
+        set $left h
+        set $down j
+        set $up k
+        set $right l
+
+    # Default Terminal
+        set $term urxvt
+
+    # Autofocus on hover
+        focus_follows_mouse yes
+
+    # Rebind capslock to escape
+        input "type:keyboard" { 
+            xkb_options caps:escape
+        }
+
+    # Include scripts or configs
+        include /etc/sway/config.d/*
+
+    # Borders
+        # Also removes all title bars
+        #for_window [class="^.*"] border pixel 2
+        default_border pixel 3
+
+        # Floating windows get no borders >:(
+        default_floating_border pixel 0
+
+        # Hide borders when you can't see them anyway
+        hide_edge_borders smart
+
+        # Set colours various window states
+        # class                 border  backgr. text    indicator child_border
+        client.focused           #4470ad #4470ad #ffffff #1e88e5   #4470ad
+        #client.focused_inactive  #5c6370 #3b3228 #ffffff #5c6370   #5c6370
+        #client.unfocused         #5c6370 #3b3228 #ffffff #5c6370   #5c6370
+
+    # Gaps
+        # I like big gaps and I can not lie
+        set $default_gaps_inner 12
+        set $default_gaps_outer 12
+        gaps inner $default_gaps_inner
+        gaps outer $default_gaps_outer
+        gaps top 0
+        # gaps bottom 10
+
+        # Hide gaps when there is only 1 window
+        smart_gaps on
+
+
+#########       Launchers      #########
+###         Menu for commands        ###
+
+    # Program Launcher
+        set $menu rofi -no-config -no-lazy-grab -show drun -modi drun -theme ~/.config/wofi/launcher.rasi
+        bindsym $mod+d exec $menu
+
+    # Power menu
+        bindsym $mod+P exec /home/marco/.config/wofi/wofi-power.sh
+
+
+######### Output Configuration #########
+###          Monitors n shit         ###
+
+    # Wallpaper
+        output * bg /home/marco/Images/bliss_windows_night.png fill
+
+    # NOTE: We are using kanshi to automagically setup screens
+    # See https://github.com/emersion/kanshi
+
+
+#########    Key Bindindings   #########
+###          (I use Arch BTW)        ###
+
+    # Start a terminal
+        bindsym $mod+Return exec $term
+
+    # Switch workspace to another monitor
+        bindsym $mod+Shift+h move workspace to output left
+        bindsym $mod+Shift+Tab move workspace to output left
+        bindsym $mod+Shift+j move workspace to output down
+        bindsym $mod+Shift+k move workspace to output up
+        bindsym $mod+Shift+l move workspace to output right
+        bindsym $mod+Tab move workspace to output right
+
+    # Kill focused window
+        bindsym $mod+Shift+q kill
+
+    # Resize/move (floating and tiled) windows with $mod and left/right click
+        floating_modifier $mod normal
+
+    # reload sway
+        bindsym $mod+Shift+c reload
+
+    # Exit sway 
+        bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'
+
+    #prev/next workspace. bind it to your mouse if you have a sticky keyboard
+        bindsym $mod+Shift+o workspace prev
+        bindsym $mod+Shift+p workspace next
+
+    # Switch to workspace
+        bindsym $mod+1 workspace number 1
+        bindsym $mod+2 workspace number 2
+        bindsym $mod+3 workspace number 3
+        bindsym $mod+4 workspace number 4
+        bindsym $mod+5 workspace number 5
+        bindsym $mod+6 workspace number 6
+        bindsym $mod+7 workspace number 7
+        bindsym $mod+8 workspace number 8
+        bindsym $mod+9 workspace number 9
+        bindsym $mod+0 workspace number 10
+
+    # Move focused container to workspace
+        bindsym $mod+Shift+1 move container to workspace number 1
+        bindsym $mod+Shift+2 move container to workspace number 2
+        bindsym $mod+Shift+3 move container to workspace number 3
+        bindsym $mod+Shift+4 move container to workspace number 4
+        bindsym $mod+Shift+5 move container to workspace number 5
+        bindsym $mod+Shift+6 move container to workspace number 6
+        bindsym $mod+Shift+7 move container to workspace number 7
+        bindsym $mod+Shift+8 move container to workspace number 8
+        bindsym $mod+Shift+9 move container to workspace number 9
+        bindsym $mod+Shift+0 move container to workspace number 10
+
+    # Split direction
+    # NOTE: we are using autotiling based on window dimensions
+    # See https://github.com/nwg-piotr/autotiling
+        bindsym $mod+b splith
+        bindsym $mod+v splitv
+
+    # Make the current focused window fullscreen
+        bindsym $mod+f fullscreen
+
+    # Toggle focused window tiled/floating
+        bindsym $mod+Shift+t floating toggle
+
+    # Swap focus between the tiling area and the floating area
+        bindsym $mod+t focus mode_toggle
+
+    # Move the currently focused window to the scratchpad
+        bindsym $mod+Shift+s move scratchpad
+
+    # Cycle through windows in the scratchpad
+        bindsym $mod+s scratchpad show
+
+    # Media keys
+        bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +10%
+        bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -10%
+        bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
+        bindsym XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
+
+    # Gaps
+        bindsym $mod+z		gaps outer current plus 5
+        bindsym $mod+Shift+z	gaps outer current minus 5
+
+    # Sreen brightness controls
+        bindsym XF86MonBrightnessDown exec light -U 5
+        bindsym XF86MonBrightnessUp exec light -A 5
+
+    # Screenshot / share shortcuts
+        bindsym Print exec "grim ~/Pictures/Screenshot-$(date -Iseconds | cut -d'+' -f1).png"
+        bindsym $mod+Print exec "grim -g "$(slurp)" - | wl-copy"
+        bindsym Shift+Print exec "wf-recorder -f ~/Pictures/Screenshot-$(date -Iseconds | cut -d'+' -f1).mp4"
+
+
+#########  Resizing Containers #########
+### $mod+mouseClick works better tho ###
+
+    mode "resize" {
+            bindsym h resize shrink width 10 px or 10 ppt
+            bindsym j resize grow height 10 px or 10 ppt
+            bindsym k resize shrink height 10 px or 10 ppt
+            bindsym l resize grow width 10 px or 10 ppt
+
+        # same bindings, but for the arrow keys
+            bindsym Left resize shrink width 10 px or 10 ppt
+            bindsym Down resize grow height 10 px or 10 ppt
+            bindsym Up resize shrink height 10 px or 10 ppt
+            bindsym Right resize grow width 10 px or 10 ppt
+
+        # easier than quitting vim
+            bindsym Return mode "default"
+            bindsym Escape mode "default"
+            bindsym $mod+r mode "default"
+    }
+    bindsym $mod+r mode "resize"
+
+
+#########   Window Properties  #########
+###   Floating/Tiling / Workspaces   ###
+
+    # Wayland default floats
+        for_window [app_id="gnome-(calendar|calculator|power-statistics|control-center)"] floating enable
+        for_window [app_id="org.gnome.(Nautilus|Weather)"] floating enable
+        for_window [app_id="(pavucontrol|psensor)"] floating enable
+        for_window [app_id="evolution-alarm-notify"] floating enable
+        for_window [app_id="nemo"] floating disable
+        for_window [app_id="solaar"] floating enable
+        for_window [app_id="evolution" title="Compose Message"] floating enable
+        for_window [app_id="evolution" title="Re(.*)"] floating enable
+        for_window [app_id="evolution" title="Fwd(.*)"] floating enable
+        for_window [app_id="mpv"] floating enable
+        for_window [app_id="mpv"] resize set 960 540
+        for_window [app_id="mpv"] border pixel 0
+        for_window [app_id="firefox" title="Firefox — Sharing Indicator"] floating enable
+        for_window [app_id="firefox" title="Picture-in-Picture"] floating enable
+        for_window [app_id="firefox" title="Pushbullet – Mozilla Firefox"] floating enable
+        for_window [app_id="firefox" title="About Mozilla Firefox"] floating enable
+
+    # Brave, chrome, chromium
+        for_window [title="Picture-in-picture"] floating enable
+
+    # XWayland default floats
+        #for_window [class="[.]*"] floating enable
+
+    # Assign programs to workspace
+        assign [class="firefox"] → number 2
+        assign [class="code"] → number 4
+        assign [class="discord"] → number 5
+        assign [class="Spotify"] → number 5
+        assign [class="Nemo"] → number 3
+        for_window [class="Gimp"] floating disable
+        for_window [class="Gimp-2.10"] floating disable
+
+
+#########   Launch Programs  #########
+###        We need dis stuff       ###
+
+# Applets
+    exec nm-applet --indicator &
+    exec blueman-applet &
+
+# Clipboard manager
+    exec wl-paste -t text --watch clipman store
+
+# fingerprint reader
+    exec lxsession &
+
+# Auto set monitor properties
+    exec kanshi &
+
+# Autotiling based on window dimensions
+    exec autotiling &
+
+# start initial programs
+    # TODO: We still need to something similar to i3 layouts
+    exec firefox &
+    exec code &
+    exec discord &
+    exec spotify &
+
+# Finally start waybar
+    exec /home/marco/.config/waybar/launch.sh &
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+###### Bag of Holding ######
+###     remove later     ###
+
+    # Workaround for GTK apps hanging during init
+    # See https://github.com/swaywm/sway/wiki#gtk-applications-take-20-seconds-to-start
+    # See https://github.com/swaywm/sway/issues/5732
+    #exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK
+    #exec dbus-update-activation-environment 2>/dev/null && \
+    #     dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
+    # End of workaround
+
+    ### Status Bar:
+    #
+    #bar {
+    #    position top
+    #
+    #    # When the status_command prints a new line to stdout, swaybar updates.
+    #    # The default just shows the Rcurrent date and time.
+    #    status_command while date +'%Y-%m-%d %l:%M:%S %p'; do sleep 1; done
+    #
+    #    colors {
+    #        statusline #ffffff
+    #        background #323232
+    #        inactive_workspace #32323200 #32323200 #5c5c5c
+    #    }
+    #}
+
+    # set $menu wofi --show=drun --lines=5 --prompt="" --hide-scroll --insensitive --columns=2
+    # bindsym $mod+d exec /home/marco/.config/wofi/launch.sh
+
+######

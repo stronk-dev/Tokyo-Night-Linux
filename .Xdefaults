@@ -1,0 +1,80 @@
+*.foreground:    #ABB2BF
+*.background:    #1A1C1E
+*.cursorColor:   #5C6370
+*.highlightColor:#3A3F4B
+
+!*fading:                  40
+!*fadeColor:               S_base03
+!*pointerColorBackground:  S_base01
+!*pointerColorForeground:  S_base1
+
+! Normal      Bright
+! --------    -------
+! 0 Black      8 Black
+! 1 Red        9 Red
+! 2 Yellow    10 Yellow
+! 3 Green     11 Green
+! 4 Blue      12 Blue
+! 5 Magenta   13 Magenta
+! 6 Cyan      14 Cyan
+! 7 White     15 White
+
+! Black colours
+*.color0:        #1A1C1E
+*.color8:        #151718
+! Red colours
+*.color1:        #E06C75
+*.color9:        #E06C75
+! Yellow colours
+*.color2:        #98C379
+*.color10:       #98C379
+! Green colours
+*.color3:        #D19A66
+*.color11:       #D19A66
+! Blue colours
+*.color4:        #61AFEF
+*.color12:       #61AFEF
+! Magenta (pink, !green) colours
+*.color5:        #C678DD
+*.color13:       #C678DD
+! Cyan (blue + green)
+*.color6:        #56B6C2
+*.color14:       #56B6C2
+! White colours
+*.color7:        #ABB2BF
+*.color15:       #FFFFFF
+
+! xterm.vt100.faceName:           Terminus:style=Regular:size=10
+! xterm.vt100.faceNameDoublesize: Cyberbit:style=Regular:size=10
+
+XTerm.vt100.bellIsUrgent:          true
+XTerm.vt100.alternateScroll: true
+XTerm.vt100.selectToClipboard: true
+
+URxvt.scrollBar: false
+URxvt.perl-ext-common: default,selection-to-clipboard
+URxvt.clipboard.autocopy: true  ! sync primary and clipboard buffers
+URxvt.secondaryScreen:  1
+URxvt.secondaryScroll:  0
+URxvt.secondaryWheel:   1
+URxvt*urgentOnBell: true
+URxvt*scrollTtyOutput: false
+URxvt*scrollWithBuffer: true
+URxvt*scrollTtyKeypress: true
+URxvt.font: xft:Consolas:pixelsize=12, xft:Segoe UI Symbol:style=Regular:pixelsize=12, xft:Unifont:pixelsize=12
+URxvt.letterSpace : -2 ! Put characters slightly closer together
+URxvt.termName : rxvt-unicode-256color
+!Urxvt*termName:  screen-256color
+URxvt.iso14755 : false
+URxvt.iso14755_52: false
+
+! transparency in i3
+!URxvt.transparent: true
+!URxvt.shading:20
+
+Xft.dpi: 96
+Xft.Hinting: 1
+Xft.RGBA: rgb
+Xft.HintStyle: hintslight
+Xft.Antialias: 1
+
