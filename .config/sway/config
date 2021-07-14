@@ -1,5 +1,6 @@
 #########     Configuration    #########
 ###           the easy stuff         ###
+    font pango: SF Pro Display 14
 
     # Key to do all the things (Mod1=Alt, Mod4=Super/Windows)
         set $mod Mod4
@@ -26,8 +27,8 @@
 
     # Borders
         # Also removes all title bars
-        #for_window [class="^.*"] border pixel 2
-        default_border pixel 3
+        for_window [class="^.*"] border pixel 2
+        default_border pixel 2
 
         # Floating windows get no borders >:(
         default_floating_border pixel 0
@@ -43,12 +44,12 @@
 
     # Gaps
         # I like big gaps and I can not lie
-        set $default_gaps_inner 12
-        set $default_gaps_outer 12
+        set $default_gaps_inner 10
+        set $default_gaps_outer 2
         gaps inner $default_gaps_inner
         gaps outer $default_gaps_outer
         gaps top 0
-        # gaps bottom 10
+        gaps bottom 10
 
         # Hide gaps when there is only 1 window
         smart_gaps on
@@ -165,9 +166,9 @@
         bindsym XF86MonBrightnessUp exec light -A 5
 
     # Screenshot / share shortcuts
-        bindsym Print exec "grim ~/Pictures/Screenshot-$(date -Iseconds | cut -d'+' -f1).png"
+        bindsym Print exec "grim /home/marco/screenShares/Screenshot-$(date -Iseconds | cut -d'+' -f1).png"
         bindsym $mod+Print exec "grim -g "$(slurp)" - | wl-copy"
-        bindsym Shift+Print exec "wf-recorder -f ~/Pictures/Screenshot-$(date -Iseconds | cut -d'+' -f1).mp4"
+        bindsym $mod+Shift+Print exec "wf-recorder -a -o eDP-1 -f /home/marco/screenShares/Screenstream-$(date -Iseconds | cut -d'+' -f1).mp4"
 
 
 #########  Resizing Containers #########
@@ -213,6 +214,9 @@
         for_window [app_id="firefox" title="Picture-in-Picture"] floating enable
         for_window [app_id="firefox" title="Pushbullet – Mozilla Firefox"] floating enable
         for_window [app_id="firefox" title="About Mozilla Firefox"] floating enable
+        for_window [class="Gimp-2.10"] floating disable
+        for_window [class="Gimp-2.10" title="Create a New Image"] floating enable
+        for_window [class="Gimp-2.10" title="Brushes - Layers | Toolbox - Tool Options"] floating enable
 
     # Brave, chrome, chromium
         for_window [title="Picture-in-picture"] floating enable
@@ -222,29 +226,42 @@
 
     # Assign programs to workspace
         assign [class="firefox"] → number 2
+        assign [app_id="firefox"] → number 2
         assign [class="code"] → number 4
         assign [class="discord"] → number 5
-        assign [class="Spotify"] → number 5
-        assign [class="Nemo"] → number 3
-        for_window [class="Gimp"] floating disable
-        for_window [class="Gimp-2.10"] floating disable
+        assign [class="Spotify"] → number 6
+        assign [class="Audacity"] → number 6
+        assign [class="Gmpc"] → number 6
+        assign [app_id="ario"] → number 6
+        assign [class="Thunderbird"] → number 8
+        assign [class="Bitwarden"] → number 9
+        # Some programs can be stubborn since they open a splash window before opening
+        for_window [class="discord"] move to workspace number 5
+        for_window [class="Spotify"] move to workspace number 6
+        for_window [class="Gimp-2.10"] move to workspace number 7
 
 
 #########   Launch Programs  #########
 ###        We need dis stuff       ###
 
+# Notification thing
+    exec mako &
+
 # Applets
     exec nm-applet --indicator &
     exec blueman-applet &
 
+# Arch update notifications
+    exec kalu &
+
 # Clipboard manager
-    exec wl-paste -t text --watch clipman store
+    exec wl-paste -t text --watch clipman store &
 
 # fingerprint reader
     exec lxsession &
 
 # Auto set monitor properties
-    exec kanshi &
+    exec_always pkill kanshi; exec kanshi &
 
 # Autotiling based on window dimensions
     exec autotiling &
@@ -255,6 +272,9 @@
     exec code &
     exec discord &
     exec spotify &
+    exec ario &
+    exec gimp &
+    exec bitwarden &
 
 # Finally start waybar
     exec /home/marco/.config/waybar/launch.sh &

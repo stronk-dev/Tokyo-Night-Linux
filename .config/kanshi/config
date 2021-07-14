@@ -7,4 +7,9 @@
   output eDP-1 enable mode 1920x1080@60.008Hz position 0,2160
 }
 
+{
+  output "Goldstar Company Ltd LG ULTRAGEAR 103NTXR8Q458" mode 2560x1440@99.946Hz position 0,0
+  output eDP-1 enable mode 1920x1080@60.008Hz position 0,1440
+}
+
 

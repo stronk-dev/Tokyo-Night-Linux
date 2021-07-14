@@ -1,6 +1,6 @@
 #waybar {
-    font-family: "Fira Sans SemiBold";
-    font-size: 13px;
+    font-family: "SF Pro Display", Cantarell, Noto Sans, sans-serif;
+    font-size: 16px;
 }
 
 #window {
@@ -14,7 +14,7 @@ window#waybar {
     text-shadow: none;
     transition-duration: 0s;
     color: rgba(217, 216, 216, 1);
-    background: rgba(0, 0, 0, 0.87);
+    background: rgba(0, 0, 0, 0.72);
 }
 
 #workspaces {
@@ -24,8 +24,9 @@ window#waybar {
 #workspaces button {
     padding: 0 8px;
     color: rgba(217, 216, 216, 0.4);
-    border: 3px solid rgba(217, 216, 216, 0);
+    border: 3px solid rgba(9, 85, 225, 0);
     border-radius: 10px;
+    min-width: 33px;
 }
 
 #workspaces button.visible {
@@ -33,39 +34,35 @@ window#waybar {
 }
 
 #workspaces button.focused {
-    border-top: 3px solid rgba(217, 216, 216, 1);
-    border-bottom: 3px solid rgba(217, 216, 216, 1);
+    border-top: 3px solid #4470ad;
+    border-bottom: 3px solid #4470ad;
 }
 
 #workspaces button.urgent {
-    background-color: #943432;
+    background-color: #a96d1f;
     color: white;
 }
 
 #workspaces button:hover {
     box-shadow: inherit;
-    border-color: #d1be8b;
-    color: #888888;
+    border-color: #1e88e5;
+    color: #1e88e5;
 }
 
 /* Repeat style here to ensure properties are overwritten as there's no !important and button:hover above resets the colour */
 
 #workspaces button.focused {
-    color: white;
+    color: #4470ad;
 }
 
 #pulseaudio {
     /* font-size: 26px; */
 }
 
-#custom-cpu_speed {
-    min-width: 82px;
-}
-
 #custom-recorder {
 	font-size: 18px;
 	margin: 2px 7px 0px 7px;
-	color:#c9545d;
+	color:rgba(238, 46, 36, 1);
 }
 
 #tray,

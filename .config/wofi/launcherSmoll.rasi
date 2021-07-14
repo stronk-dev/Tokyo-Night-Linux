@@ -19,17 +19,17 @@ window {
 	border:							1px 3px 5px 1px;
 	border-color:					@ac;
     border-radius:                  2px;
-	width:							600px;
+	width:							150px;
     location:                       center;
     x-offset:                       0;
     y-offset:                       0;
 }
 
 prompt {
-    enabled: 						true;
+    enabled: 						false;
 	padding: 						2px 0px 0px 4px;
-	background-color: 				@al;
-	text-color: 					@fg;
+	background-color: 				@ac;
+	text-color: 					@ac;
 	font:							"feather 12";
 }
 
@@ -49,6 +49,7 @@ inputbar {
     background-color:               @bga;
     text-color:                     @fg;
     expand:                         false;
+    enabled: 						false;
 	border:							0px;
     border-radius:                  0px;
 	border-color:					@ac;
@@ -59,8 +60,8 @@ inputbar {
 listview {
     background-color:               @al;
     padding:                        0px;
-    columns:                        2;
-    lines:                          7;
+    columns:                        1;
+    lines:                          6;
     spacing:                        6px;
     cycle:                          true;
     dynamic:                        true;

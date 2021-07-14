@@ -1,9 +1,10 @@
 {
     "layer": "top",
     "position": "top",
+    "height": 40,
     "modules-left": ["sway/workspaces", "sway/mode", "sway/window"],
     "modules-center": ["clock"],
-    "modules-right": ["custom/recorder", "tray", "pulseaudio", "backlight", "temperature", "custom/cpu_speed", "battery", "network", "custom/powermenu"],
+    "modules-right": ["custom/recorder", "tray", "pulseaudio", "backlight", "temperature", "cpu", "memory", "battery", "network", "custom/powermenu"],
     "sway/mode": {
         "format": " {}"
     },
@@ -13,19 +14,21 @@
         "disable-markup": false,
         "format": "{icon}",
         "format-icons": {
-            "1": "1 <span font='Font Awesome 5 Free 11'></span>",
-            "2": "2 <span font='Font Awesome 5 Free 11'></span>",
-            "3": "3 <span font='Font Awesome 5 Free 11'></span>",
-            "4": "4 <span font='Font Awesome 5 Free 11'></span>",
-            "5": "5 <span font='Font Awesome 5 Free 11'></span>",
-            "6": "6 <span font='Font Awesome 5 Free 11'></span>",
-            "7": "6 <span font='Font Awesome 5 Free 11'></span>",
-            "8": "6 <span font='Font Awesome 5 Free 11'></span>"
+            "1": "1 <span font='Font Awesome 5 Free 14'></span>",
+            "2": "2 <span font='Font Awesome 5 Free 14'></span>",
+            "3": "3 <span font='Font Awesome 5 Free 14'></span>",
+            "4": "4 <span font='Font Awesome 5 Free 14'></span>",
+            "5": "5 <span font='Font Awesome 5 Free 14'></span>",
+            "6": "6 <span font='Font Awesome 5 Free 14'></span>",
+            "7": "7 <span font='Font Awesome 5 Free 14'></span>",
+            "8": "8 <span font='Font Awesome 5 Free 14'></span>",
+            "9": "9 <span font='Font Awesome 5 Free 14'></span>",
+            "10": "0 <span font='Font Awesome 5 Free 14'></span>"
         }
     },
     "tray": {
         "icon-size": 20,
-        "spacing": 10
+        "spacing": 8
     },
     "sway/window": {
         "max-length": 60,
@@ -34,41 +37,43 @@
     },
     "clock": {
         "format": "{:%a %d %b - %H:%M}",
-        "tooltip": false,
-        "on-click": "gnome-calendar"
+        "tooltip": false
     },
-    "custom/cpu_speed": {
-        "interval": 10,
-        "return-type": "json",
-        "exec": "~/.config/waybar/modules/cpu_speed.sh",
-        "format": "<span font='Font Awesome 5 Free 11'>{icon}</span>  {}",
-        "format-icons": [""],
-        "escape": true,
-        "on-click": "urxvt -e htop"
+    "cpu": {
+        "interval": 5,
+        "format": "︁ {}%",
+        "max-length": 10
+    },
+    "memory": {
+        "interval": 15,
+        "format": "<span font='Font Awesome 5 Free 9'>︁</span> {used:0.1f}G/{total:0.1f}G",
+        "tooltip": false
     },
     "custom/powermenu": {
         "return-type": "json",
-        "exec": "~/.config/waybar/modules/powermenu.sh",
+        "exec": "/home/marco/.config/waybar/modules/powermenu.sh",
         "format": "<span font='Font Awesome 5 Free 9'>{icon}</span>  {}",
         "format-icons": [""],
         "interval": 3600,
         "escape": true,
-        "on-click": "home/marco/.config/wofi/wofi-power.sh"
+        "on-click": "/home/marco/.config/wofi/wofi-power.sh"
     },
     "custom/recorder": {
-		"format": "",
+		"format": "!",
 		"return-type": "json",
-		"interval": 4,
+		"interval": 3,
 		"exec": "echo '{\"class\": \"recording\"}'",
-		"exec-if": "pgrep wf-recorder"
+		"exec-if": "pgrep wf-recorder",
+        "tooltip": false,
+        "on-click": "killall -s SIGINT wf-recorder"
 	},
     "battery": {
-        "format": "<span font='Font Awesome 5 Free 11'>{icon}</span>  {capacity}% - {time}",
+        "format": "<span font='Font Awesome 5 Free 11'>{icon}</span> {capacity}%{time}",
         "format-icons": ["", "", "", "", ""],
-        "format-time": "{H}h{M}m",
+        "format-time": " ({H}h{M}m)",
         "format-charging": "<span font='Font Awesome 5 Free'></span>  <span font='Font Awesome 5 Free 11'>{icon}</span>  {capacity}% - {time}",
         "format-full": "<span font='Font Awesome 5 Free'></span>  <span font='Font Awesome 5 Free 11'>{icon}</span>  Charged",
-        "interval": 30,
+        "interval": 15,
         "states": {
             "warning": 25,
             "critical": 10
@@ -77,17 +82,16 @@
     },
     "network": {
         "format": "{icon}",
-        "format-alt": "{ipaddr}/{cidr} {icon}",
-        "format-alt-click": "click-right",
-        "format-wifi": "<span font='Font Awesome 5 Free 10'></span>  {essid} ({signalStrength}%)",
-        "format-ethernet": " {ifname}",
+        "format-alt": "<span font='Font Awesome 5 Free 10'>︁</span> ︁{ipaddr}/{cidr} {icon}",
+        "format-alt-click": "click-left",
+        "format-wifi": "<span font='Font Awesome 5 Free 10'></span> {essid} ({signalStrength}%)",
+        "format-ethernet": "<span font='Font Awesome 5 Free 10'>︁</span> {ifname}",
         "format-disconnected": "⚠ Disconnected",
-        "on-click": "urxvt -e /home/marco/sway/scripts/network-manager",
         "tooltip": false
     },
     "pulseaudio": {
-        "format": "<span font='Font Awesome 5 Free 11'>{icon:2}</span> {volume:4}%",
-        "format-alt": "<span font='Font Awesome 5 Free 11'>{icon:2}</span> {volume:4}%",
+        "format": "<span font='Font Awesome 5 Free 11'>{icon:2}</span>{volume}%",
+        "format-alt": "<span font='Font Awesome 5 Free 11'>{icon:2}</span>{volume}%",
         "format-alt-click": "click-right",
         "format-muted": "<span font='Font Awesome 5 Free 11'></span>",
         "format-icons": {
@@ -99,10 +103,10 @@
         "tooltip": false
     },
     "backlight": {
-        "format": "{icon}",
-        "format-alt": "{percent}% {icon}",
-        "format-alt-click": "click-right",
-        "format-icons": ["", ""],
+        "format": "{icon} {percent}%",
+        "format-alt": "{icon}",
+        "format-alt-click": "click-left",
+        "format-icons": ["", ""],
         "on-scroll-up": "light -A 1",
         "on-scroll-down": "light -U 1"
     },
@@ -111,6 +115,7 @@
         "critical-threshold": 75,
         "interval": 5,
         "format": "{icon} {temperatureC}°",
+        "tooltip": false,
         "format-icons": [
             "", // Icon: temperature-empty
             "", // Icon: temperature-quarter

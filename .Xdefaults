@@ -1,7 +1,7 @@
-*.foreground:    #ABB2BF
-*.background:    #1A1C1E
-*.cursorColor:   #5C6370
-*.highlightColor:#3A3F4B
+*.foreground:    #c0caf5
+*.background:    #1a1b26
+*.cursorColor:   #c0caf5
+*.highlightColor:#364A82
 
 !*fading:                  40
 !*fadeColor:               S_base03
@@ -20,29 +20,32 @@
 ! 7 White     15 White
 
 ! Black colours
-*.color0:        #1A1C1E
-*.color8:        #151718
+*.color0:        #1D202F
+*.color8:        #414868
 ! Red colours
-*.color1:        #E06C75
-*.color9:        #E06C75
+*.color1:        #f7768e
+*.color9:        #f7768e
 ! Yellow colours
-*.color2:        #98C379
-*.color10:       #98C379
+*.color2:        #9ece6a
+*.color10:       #9ece6a
 ! Green colours
-*.color3:        #D19A66
-*.color11:       #D19A66
+*.color3:        #e0af68
+*.color11:       #e0af68
 ! Blue colours
-*.color4:        #61AFEF
-*.color12:       #61AFEF
+*.color4:        #7aa2f7
+*.color12:       #7aa2f7
 ! Magenta (pink, !green) colours
-*.color5:        #C678DD
-*.color13:       #C678DD
+*.color5:        #bb9af7
+*.color13:       #bb9af7
 ! Cyan (blue + green)
-*.color6:        #56B6C2
-*.color14:       #56B6C2
+*.color6:        #7dcfff
+*.color14:       #7dcfff
 ! White colours
-*.color7:        #ABB2BF
-*.color15:       #FFFFFF
+*.color7:        #a9b1d6
+*.color15:       #c0caf5
+
+*.color16:        #ff9e64
+*.color17:       #db4b4b
 
 ! xterm.vt100.faceName:           Terminus:style=Regular:size=10
 ! xterm.vt100.faceNameDoublesize: Cyberbit:style=Regular:size=10
@@ -61,7 +64,8 @@ URxvt*urgentOnBell: true
 URxvt*scrollTtyOutput: false
 URxvt*scrollWithBuffer: true
 URxvt*scrollTtyKeypress: true
-URxvt.font: xft:Consolas:pixelsize=12, xft:Segoe UI Symbol:style=Regular:pixelsize=12, xft:Unifont:pixelsize=12
+URxvt.font:     xft:bitstream vera sans mono:size=12:antialias=true
+URxvt.boldFont: xft:bitstream vera sans mono:bold:size=12:antialias=true
 URxvt.letterSpace : -2 ! Put characters slightly closer together
 URxvt.termName : rxvt-unicode-256color
 !Urxvt*termName:  screen-256color
