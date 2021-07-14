@@ -27,29 +27,27 @@
 
     # Borders
         # Also removes all title bars
-        for_window [class="^.*"] border pixel 2
-        default_border pixel 2
+        for_window [class="^.*"] border pixel 5
+        default_border pixel 5
 
         # Floating windows get no borders >:(
-        default_floating_border pixel 0
+        default_floating_border pixel 5
 
         # Hide borders when you can't see them anyway
         hide_edge_borders smart
 
         # Set colours various window states
         # class                 border  backgr. text    indicator child_border
-        client.focused           #4470ad #4470ad #ffffff #1e88e5   #4470ad
-        #client.focused_inactive  #5c6370 #3b3228 #ffffff #5c6370   #5c6370
-        #client.unfocused         #5c6370 #3b3228 #ffffff #5c6370   #5c6370
+        client.focused           #364A82 #364A82 #c0caf5 #364A82   #364A82
+        client.focused_inactive  #16161d #16161d #c0caf5 #16161d   #16161d
+        client.unfocused         #16161d #16161d #c0caf5 #16161d   #16161d
 
     # Gaps
         # I like big gaps and I can not lie
-        set $default_gaps_inner 10
-        set $default_gaps_outer 2
-        gaps inner $default_gaps_inner
-        gaps outer $default_gaps_outer
+        gaps inner 0
+        gaps outer 0
         gaps top 0
-        gaps bottom 10
+        gaps bottom 0
 
         # Hide gaps when there is only 1 window
         smart_gaps on
@@ -70,7 +68,8 @@
 ###          Monitors n shit         ###
 
     # Wallpaper
-        output * bg /home/marco/Images/bliss_windows_night.png fill
+        #output * bg /home/marco/Images/bliss_windows_night.png fill
+        output * bg #16161d solid_color
 
     # NOTE: We are using kanshi to automagically setup screens
     # See https://github.com/emersion/kanshi
@@ -157,10 +156,6 @@
         bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
         bindsym XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
 
-    # Gaps
-        bindsym $mod+z		gaps outer current plus 5
-        bindsym $mod+Shift+z	gaps outer current minus 5
-
     # Sreen brightness controls
         bindsym XF86MonBrightnessDown exec light -U 5
         bindsym XF86MonBrightnessUp exec light -A 5
@@ -215,8 +210,11 @@
         for_window [app_id="firefox" title="Pushbullet – Mozilla Firefox"] floating enable
         for_window [app_id="firefox" title="About Mozilla Firefox"] floating enable
         for_window [class="Gimp-2.10"] floating disable
-        for_window [class="Gimp-2.10" title="Create a New Image"] floating enable
-        for_window [class="Gimp-2.10" title="Brushes - Layers | Toolbox - Tool Options"] floating enable
+        for_window [class="Gimp-2.10" title="New Image"] floating enable
+        for_window [class="Gimp-2.10" title="Layer"] floating enable
+        for_window [class="Gimp-2.10" title="Tool"] floating enable
+        for_window [class="Gimp-2.10" title="Option"] floating enable
+        for_window [class="Gimp-2.10" title="Change"] floating enable
 
     # Brave, chrome, chromium
         for_window [title="Picture-in-picture"] floating enable
