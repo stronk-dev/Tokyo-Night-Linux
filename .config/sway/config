@@ -14,8 +14,8 @@
     # Default Terminal
         set $term urxvt
 
-    # Autofocus on hover
-        focus_follows_mouse yes
+    # Autofocus on hover, also when switching workspaces
+        focus_follows_mouse always
 
     # Rebind capslock to escape
         input "type:keyboard" { 
@@ -27,23 +27,47 @@
 
     # Borders
         # Also removes all title bars
-        for_window [class="^.*"] border pixel 5
-        default_border pixel 5
+        for_window [class="^.*"] border pixel 4
+        default_border pixel 4
 
         # Floating windows get no borders >:(
-        default_floating_border pixel 5
+        default_floating_border pixel 4
 
-        # Hide borders when you can't see them anyway
+        # Hide borders at the edge of the screen
         hide_edge_borders smart
 
         # Set colours various window states
-        # class                 border  backgr. text    indicator child_border
-        client.focused           #364A82 #364A82 #c0caf5 #364A82   #364A82
+        # Syntax: client.<class> <border> <background> <text> [<indicator> [<child_border>]]
+        # The available classes are:
+            # client.focused: The window that has focus.
+            # client.focused_inactive: The most recently focused view within a container which is not focused.
+            # client.placeholder: Ignored (present for i3 compatibility).
+            # client.unfocused: A view that does not have focus.
+            # client.urgent: A view with an urgency hint. Note: Native Wayland windows do not support urgency. Urgency only works for Xwayland windows.
+        #The meaning of each color is:
+            # border: The border around the title bar.
+            # background: The background of the title bar.
+            # text: The text color of the title bar.
+            # indicator: The color used to indicate where a new view will open. In a tiled container, this would paint the right border of the current view if a new view would be opened to the right.
+            # child_border: The border around the view itself.
+        # The default colors are:
+            # class	        border	background	text    indicator	child_border			
+            # background	n/a	    #ffffff     n/a	    n/a	        n/a
+            # focused	    #4c7899	#285577	    #ffffff	#2e9ef4	    #285577
+            # focused_inactive	#333333	#5f676a	#ffffff	#484e50	    #5f676a
+            # unfocused	    #333333	#222222	    #888888	#292d2e	    #222222
+            # urgent	    #2f343a	#900000	    #ffffff	#900000	    #900000
+            # placeholder	#000000	#0c0c0c	    #ffffff	#000000 	#0c0c0c
+        client.focused           #343b58 #343b58 #c0caf5 #343b58   #343b58
         client.focused_inactive  #16161d #16161d #c0caf5 #16161d   #16161d
         client.unfocused         #16161d #16161d #c0caf5 #16161d   #16161d
 
     # Gaps
-        # I like big gaps and I can not lie
+        # gaps inner|outer|horizontal|vertical|top|right|bottom|left <amount>
+        # Sets default amount pixels of inner or outer gap
+        # the inner affects spacing around each view
+        # the outer affects the spacing around each workspace
+        # To reduce or remove outer gaps, outer gaps can be set to a negative value.
         gaps inner 0
         gaps outer 0
         gaps top 0
@@ -68,7 +92,7 @@
 ###          Monitors n shit         ###
 
     # Wallpaper
-        #output * bg /home/marco/Images/bliss_windows_night.png fill
+        #output * bg /home/marco/Pictures/bliss_windows_night.png fill
         output * bg #16161d solid_color
 
     # NOTE: We are using kanshi to automagically setup screens
@@ -92,8 +116,9 @@
     # Kill focused window
         bindsym $mod+Shift+q kill
 
-    # Resize/move (floating and tiled) windows with $mod and left/right click
-        floating_modifier $mod normal
+    # Resize/move (floating and tiled) windows with mouse
+    # inverse: $mod+left click = resize    $mod + right click = move window
+        floating_modifier $mod inverse
 
     # reload sway
         bindsym $mod+Shift+c reload
@@ -102,8 +127,8 @@
         bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'
 
     #prev/next workspace. bind it to your mouse if you have a sticky keyboard
-        bindsym $mod+Shift+o workspace prev
-        bindsym $mod+Shift+p workspace next
+        bindsym $mod+Shift+o workspace prev_on_output
+        bindsym $mod+Shift+p workspace next_on_output
 
     # Switch to workspace
         bindsym $mod+1 workspace number 1
@@ -237,32 +262,37 @@
         for_window [class="discord"] move to workspace number 5
         for_window [class="Spotify"] move to workspace number 6
         for_window [class="Gimp-2.10"] move to workspace number 7
+        for_window [class="Gimp"] move to workspace number 7
 
 
 #########   Launch Programs  #########
 ###        We need dis stuff       ###
 
 # Notification thing
-    exec mako &
+    exec mako 
 
 # Applets
-    exec nm-applet --indicator &
-    exec blueman-applet &
+    exec nm-applet --indicator 
+    exec blueman-applet 
 
 # Arch update notifications
-    exec kalu &
+    exec kalu 
+
+# Gnome Keyring
+    exec eval $(gnome-keyring-daemon --start)
+    exec export SSH_AUTH_SOCK
 
 # Clipboard manager
-    exec wl-paste -t text --watch clipman store &
+    exec wl-paste -t text --watch clipman store
 
 # fingerprint reader
-    exec lxsession &
+    exec lxsession
 
 # Auto set monitor properties
-    exec_always pkill kanshi; exec kanshi &
+    exec_always pkill kanshi; exec kanshi
 
 # Autotiling based on window dimensions
-    exec autotiling &
+    exec autotiling
 
 # start initial programs
     # TODO: We still need to something similar to i3 layouts
@@ -273,9 +303,10 @@
     exec ario &
     exec gimp &
     exec bitwarden &
+    exec thunderbird &
 
 # Finally start waybar
-    exec /home/marco/.config/waybar/launch.sh &
+    exec /home/marco/.config/waybar/launch.sh
 
 
 

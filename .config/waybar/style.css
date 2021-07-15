@@ -30,12 +30,12 @@ window#waybar {
 }
 
 #workspaces button.visible {
-    color: rgba(217, 216, 216, 1);
+    color: #343b58;
 }
 
 #workspaces button.focused {
-    border-top: 3px solid #364A82;
-    border-bottom: 3px solid #364A82;
+    border-top: 3px solid #343b58;
+    border-bottom: 3px solid #343b58;
 }
 
 #workspaces button.urgent {
@@ -45,14 +45,14 @@ window#waybar {
 
 #workspaces button:hover {
     box-shadow: inherit;
-    border-color: #4470ad;
-    color: #4470ad;
+    border-color: #34548a;
+    color: #364A82;
 }
 
 /* Repeat style here to ensure properties are overwritten as there's no !important and button:hover above resets the colour */
 
 #workspaces button.focused {
-    color: #364A82;
+    color: #343b58;
 }
 
 #pulseaudio {
