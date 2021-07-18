@@ -19,9 +19,9 @@
 
     # Borders
         # Also removes all title bars
-        for_window [class="^.*"] border pixel 6
-        default_border pixel 6
-        default_floating_border pixel 6
+        for_window [class="^.*"] border pixel 5
+        default_border pixel 5
+        default_floating_border pixel 5
 
         # Hide borders at the edge of the screen
         hide_edge_borders smart
@@ -48,7 +48,7 @@
             # unfocused	    #333333	#222222	    #888888	#292d2e	    #222222
             # urgent	    #2f343a	#900000	    #ffffff	#900000	    #900000
             # placeholder	#000000	#0c0c0c	    #ffffff	#000000 	#0c0c0c
-        client.focused           #343b58 #343b58 #c0caf5 #343b58   #343b58
+        client.focused           #565f89 #565f89 #c0caf5 #565f89   #565f89
         client.focused_inactive  #16161d #16161d #c0caf5 #16161d   #16161d
         client.unfocused         #16161d #16161d #c0caf5 #16161d   #16161d
 
@@ -92,11 +92,9 @@
 
     # Switch workspace to another monitor
         bindsym $mod+Shift+h move workspace to output left
-        bindsym $mod+Shift+Tab move workspace to output left
         bindsym $mod+Shift+j move workspace to output down
         bindsym $mod+Shift+k move workspace to output up
         bindsym $mod+Shift+l move workspace to output right
-        bindsym $mod+Tab move workspace to output right
 
     # Kill focused window
         bindsym $mod+Shift+q kill
@@ -130,7 +128,7 @@
         bindsym $mod+0 workspace number 10
 
     # Move focused container to workspace
-        bindsym $mod+Shift+1 move container to workspace number 1
+        bindsym $mod+Shift+1 move container to autotiling &workspace number 1
         bindsym $mod+Shift+2 move container to workspace number 2
         bindsym $mod+Shift+3 move container to workspace number 3
         bindsym $mod+Shift+4 move container to workspace number 4
@@ -238,12 +236,15 @@
 
 #########   Launch Programs  #########
 ###        We need dis stuff       ###
-
 # Applets
     exec --no-startup-id nm-applet &
 
 # Arch update notifications
-    #exec --no-startup-id kalu 
+    exec --no-startup-id kalu &
+
+# NOTE: we are using autotiling based on window dimensions
+# See https://github.com/nwg-piotr/autotiling
+    exec --no-startup-id autotiling &
 
 # Gnome Keyring
     exec --no-startup-id eval $(gnome-keyring-daemon --start)
@@ -256,6 +257,7 @@
     exec --no-startup-id spotify &
     exec --no-startup-id gimp &
     exec --no-startup-id bitwarden &
+    #exec --no-startup-id bitwarden-desktop &
     exec --no-startup-id thunderbird &
     exec --no-startup-id /home/marco/.config/i3/launchTerminals
     exec --no-startup-id /home/marco/.config/i3/launchNemos
