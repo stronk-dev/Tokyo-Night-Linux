@@ -19,11 +19,9 @@
 
     # Borders
         # Also removes all title bars
-        for_window [class="^.*"] border pixel 4
-        default_border pixel 4
-
-        # Floating windows get no borders >:(
-        default_floating_border pixel 4
+        for_window [class="^.*"] border pixel 6
+        default_border pixel 6
+        default_floating_border pixel 6
 
         # Hide borders at the edge of the screen
         hide_edge_borders smart
