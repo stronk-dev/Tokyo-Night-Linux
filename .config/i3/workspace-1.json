@@ -1,0 +1,120 @@
+// vim:ts=4:sw=4:et
+{
+    "border": "pixel",
+    "current_border_width": 2,
+    "floating": "auto_off",
+    "geometry": {
+       "height": 340,
+       "width": 564,
+       "x": 0,
+       "y": 0
+    },
+    "marks": [],
+    "name": "marco@koiosdev/home/marco/Documents",
+    "percent": 0.4,
+    "swallows": [
+       {
+        "class": "^URxvt$",
+        "instance": "termDocuments"
+       }
+    ],
+    "type": "con"
+}
+
+{
+    // splitv split container with 2 children
+    "border": "normal",
+    "floating": "auto_off",
+    "layout": "splitv",
+    "marks": [],
+    "percent": 0.6,
+    "type": "con",
+    "nodes": [
+        {
+            // splith split container with 2 children
+            "border": "normal",
+            "floating": "auto_off",
+            "layout": "splith",
+            "marks": [],
+            "percent": 0.6,
+            "type": "con",
+            "nodes": [
+                {
+                    "border": "pixel",
+                    "current_border_width": 2,
+                    "floating": "auto_off",
+                    "geometry": {
+                       "height": 340,
+                       "width": 564,
+                       "x": 0,
+                       "y": 0
+                    },
+                    "marks": [],
+                    "name": "marco@koiosdev:/home/marco/",
+                    "percent": 0.5,
+                    "swallows": [
+                       {
+                        "class": "^URxvt$",
+                        "instance": "termHome"
+                       }
+                    ],
+                    "type": "con"
+                },
+                {
+                    "border": "pixel",
+                    "current_border_width": 2,
+                    "floating": "auto_off",
+                    "geometry": {
+                       "height": 340,
+                       "width": 564,
+                       "x": 0,
+                       "y": 0
+                    },
+                    "marks": [],
+                    "name": "marco@koiosdev:/home/marco/.config",
+                    "percent": 0.5,
+                    "swallows": [
+                       {
+                        "class": "^URxvt$",
+                        "instance": "termConfig"
+                       }
+                    ],
+                    "type": "con"
+                }
+            ]
+        },
+        {
+            // splith split container with 1 children
+            "border": "normal",
+            "floating": "auto_off",
+            "layout": "splith",
+            "marks": [],
+            "percent": 0.4,
+            "type": "con",
+            "nodes": [
+                {
+                    "border": "pixel",
+                    "current_border_width": 2,
+                    "floating": "auto_off",
+                    "geometry": {
+                       "height": 340,
+                       "width": 564,
+                       "x": 0,
+                       "y": 0
+                    },
+                    "marks": [],
+                    "name": "marco@koiosdev:/home/marco/Downloads",
+                    "percent": null,
+                    "swallows": [
+                       {
+                        "class": "^URxvt$",
+                        "instance": "termDownloads"
+                       }
+                    ],
+                    "type": "con"
+                }
+            ]
+        }
+    ]
+}
+

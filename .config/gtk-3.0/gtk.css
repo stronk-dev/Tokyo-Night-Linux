@@ -1,0 +1,191 @@
+/* Custom styles */
+
+/* select-on */
+@define-color selected_bg_color #364a82;
+@define-color selected_fg_color #c0caf5;
+@define-color theme_selected_bg_color @selected_bg_color;
+@define-color theme_selected_fg_color @selected_fg_color;
+/* select-on */
+
+/* panel-on */
+@define-color panel_bg_color #414868;
+@define-color panel_fg_color #c0caf5;
+
+PanelWidget,
+PanelApplet,
+PanelToplevel,
+PanelSeparator,
+PanelApplet > GtkMenuBar.menubar,
+PanelApplet > GtkMenuBar.menubar.menuitem,
+PanelMenuBar.menubar,
+PanelMenuBar.menubar.menuitem,
+PanelAppletFrame,
+UnityPanelWidget,
+.gnome-panel-menu-bar,
+.unity-panel {
+	background-image: -gtk-gradient(linear,left top,left bottom,from(shade(@panel_bg_color,1.2)),to(shade(@panel_bg_color,0.8)));
+	color: @panel_fg_color;
+}
+
+.unity-panel.menuitem,
+.unity-panel .menuitem {
+	color: @panel_fg_color;
+}
+
+.unity-panel.menubar.menuitem:hover,
+.unity-panel.menubar .menuitem *:hover {
+	border-color: shade(@panel_bg_color, 0.7);
+	border-image: none;
+	background-image: -gtk-gradient(linear,left top,left bottom,from(shade(@panel_bg_color, 0.97)),to(shade(@panel_bg_color, 0.82)));
+	color: @panel_fg_color;
+}
+
+PanelApplet .button {
+	border-color: transparent;
+	border-image: none;
+	background-image: -gtk-gradient(linear,left top,left bottom,from(shade(@panel_bg_color,1.2)),to(shade(@panel_bg_color,0.8)));
+	color: @panel_fg_color;
+	box-shadow: none;
+	text-shadow: none;
+	-unico-inner-stroke-width: 0;
+}
+
+PanelApplet .button:active {
+	border-color: shade(@panel_bg_color,0.8);
+	border-image: none;
+	background-image: -gtk-gradient(linear,left top,left bottom,from(shade(shade(@panel_bg_color,1.02),0.9)),to(shade(shade(@panel_bg_color,1.02),0.95)));
+	color: @panel_fg_color;
+	box-shadow: none;
+	text-shadow: none;
+	-unico-inner-stroke-width: 0;
+}
+
+PanelApplet .button:prelight {
+	border-color: transparent;
+	border-image: none;
+	background-image: -gtk-gradient(linear,left top,left bottom,from(shade(@panel_bg_color,1.2)),to(shade(@panel_bg_color,1.0)));
+	color: @panel_fg_color;
+	box-shadow: none;
+	text-shadow: none;
+	-unico-inner-stroke-width: 0;
+}
+
+PanelApplet .button:active:prelight {
+	border-color: shade(@panel_bg_color,0.8);
+	border-image: none;
+	background-image: -gtk-gradient(linear,left top,left bottom,from(shade(shade(@panel_bg_color,1.02),1.0)),to(shade(shade(@panel_bg_color,1.02),1.05)));
+	color: @panel_fg_color;
+	box-shadow: none;
+	text-shadow: none;
+	-unico-inner-stroke-width: 0;
+}
+
+WnckPager,
+WnckTasklist {
+	background-color: @panel_bg_color;
+}
+
+/* panel-on */
+
+/* menu-on */
+@define-color menu_bg_color #1d202f;
+@define-color menu_fg_color #c0caf5;
+
+GtkTreeMenu.menu,
+GtkMenuToolButton.menu,
+GtkComboBox .menu {
+	background-color: @menu_bg_color;
+}
+
+.primary-toolbar .button .menu,
+.toolbar .menu,
+.toolbar .primary-toolbar .menu,
+.menu {
+	border-style: none;
+	background-image: none;
+	background-color: @menu_bg_color;
+	color: @menu_fg_color;
+	box-shadow: none;
+	text-shadow: none;
+	-unico-inner-stroke-width: 0;
+}
+
+.menu.button:hover,
+.menu.button:active,
+.menu.button:active:insensitive,
+.menu.button:insensitive,
+.menu.button {
+	background-color: @menu_bg_color;
+	background-image: none;
+}
+
+GtkTreeMenu .menuitem * {
+	color: @menu_fg_color;
+}
+
+.menuitem,
+.menu .menuitem {
+	background-color: transparent;
+}
+
+.menu .menuitem:active,
+.menu .menuitem:hover {
+	background-color: @theme_selected_bg_color;
+}
+
+.menuitem.check,
+.menuitem.radio,
+.menuitem.check:hover,
+.menuitem.radio:hover,
+.menuitem.check:active,
+.menuitem.radio:active {
+	background-color: transparent;
+}
+
+.menu .menuitem:insensitive,
+.menu .menuitem *:insensitive {
+	color: mix(@menu_fg_color,@menu_bg_color,0.5);
+}
+
+.menuitem.arrow {
+	color: alpha(@menu_fg_color, 0.6);
+}
+
+.menuitem .entry {
+	border-color: shade(@menu_bg_color,0.7);
+	border-image: none;
+	background-color: @menu_bg_color;
+	background-image: none;
+	color: @menu_fg_color;
+}
+
+.menuitem .accelerator {
+	color: alpha(@menu_fg_color,0.6);
+}
+
+.menuitem .accelerator:insensitive {
+	color: alpha(mix(@menu_fg_color,@menu_bg_color,0.5),0.6);
+	text-shadow: none;
+}
+
+.menuitem.separator {
+	background-color: transparent;
+	color: shade(@menu_bg_color, 0.9);
+}
+
+.menuitem GtkCalendar,
+.menuitem GtkCalendar.button,
+.menuitem GtkCalendar.header,
+.menuitem GtkCalendar.view {
+	border-color: shade(@menu_bg_color,0.8);
+	border-image: none;
+	background-color: @menu_bg_color;
+	background-image: none;
+	color: @menu_fg_color;
+}
+
+.menuitem GtkCalendar:inconsistent {
+	color: mix(@menu_fg_color,@menu_bg_color,0.5);
+}
+
+/* menu-on */

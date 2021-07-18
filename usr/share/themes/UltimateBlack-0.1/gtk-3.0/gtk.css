@@ -1346,7 +1346,7 @@ searchbar > revealer > box {
 }
 
 .titlebar:backdrop {
-  background-color: #121217;
+  background-color: #16161e;
   color: rgba(187, 187, 187, 0.7);
 }
 
@@ -1836,7 +1836,7 @@ menubar,
 
 menubar:backdrop,
 .menubar:backdrop {
-  background-color: #121217;
+  background-color: #16161e;
   color: rgba(187, 187, 187, 0.7);
 }
 
@@ -3988,7 +3988,7 @@ messagedialog.csd decoration {
 }
 
 .solid-csd decoration:backdrop {
-  background-color: #121217;
+  background-color: #16161e;
 }
 
 button.titlebutton {
@@ -4860,7 +4860,7 @@ dzlsuggestionpopover > revealer > box > elastic > scrolledwindow > viewport > li
 }
 
 #titlebar_container .suggestionbutton button:backdrop {
-  box-shadow: inset 0 0 0 9999px #121217;
+  box-shadow: inset 0 0 0 9999px #16161e;
 }
 
 #titlebar_container .suggestionbutton button image {
@@ -5454,7 +5454,7 @@ UnityDecoration .top {
 }
 
 UnityDecoration .top:backdrop {
-  background-color: #121217;
+  background-color: #16161e;
   color: rgba(187, 187, 187, 0.7);
 }
 
@@ -5480,7 +5480,7 @@ UnityDecoration .menuitem:hover {
 
 UnityPanelWidget,
 .unity-panel {
-  background-color: #121217;
+  background-color: #16161e;
   color: #bbbbbb;
 }
 
@@ -5515,7 +5515,7 @@ UnityPanelWidget:backdrop,
 }
 
 .mate-panel-menu-bar {
-  background-color: #121217;
+  background-color: #16161e;
   color: rgba(204, 204, 204, 0.7);
   font-weight: 500;
 }
@@ -6262,7 +6262,7 @@ MsdOsdWindow.background.osd .progressbar {
 
 .budgie-panel {
   transition: background-color 75ms cubic-bezier(0, 0, 0.2, 1);
-  background-color: #121217;
+  background-color: #16161e;
   color: rgba(204, 204, 204, 0.7);
   font-weight: 500;
 }
@@ -6734,7 +6734,7 @@ calendar.raven-calendar:selected {
  ***************/
 .xfce4-panel.background {
   border: none;
-  background-color: #121217;
+  background-color: #16161e;
   color: rgba(204, 204, 204, 0.7);
   font-weight: 500;
 }
@@ -7081,7 +7081,7 @@ read if you used those and something break with a version upgrade you're on your
 @define-color wm_unfocused_title rgba(187, 187, 187, 0.7);
 @define-color wm_highlight rgba(255, 255, 255, 0.1);
 @define-color wm_bg #16161e;
-@define-color wm_unfocused_bg #121217;
+@define-color wm_unfocused_bg #16161e;
 @define-color xfwm4_title #bbbbbb;
 @define-color xfwm4_unfocused_title #838383;
 /*

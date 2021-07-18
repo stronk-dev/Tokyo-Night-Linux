@@ -1608,7 +1608,7 @@ StScrollBar StButton#hhandle:active {
 #panel {
   transition-duration: 250ms;
   height: 28px;
-  background-color: #121217;
+  background-color: #16161e;
   font-weight: bold;
   font-feature-settings: "tnum";
 }
@@ -3070,7 +3070,7 @@ StScrollBar StButton#hhandle:active {
 }
 
 #lockDialogGroup {
-  background-color: #121217;
+  background-color: #16161e;
   color: #cccccc;
 }
 

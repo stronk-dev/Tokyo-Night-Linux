@@ -1,0 +1,5 @@
+#!/bin/bash -e
+i3-msg "workspace 3; append_layout /home/marco/.config/i3/workspace-3.json"
+nemo --name="nemoDocuments" '/home/marco/Documents' &
+nemo --name="nemoConfig" '/home/marco/.config' &
+nemo --name="nemoSHM" '/dev/shm' &

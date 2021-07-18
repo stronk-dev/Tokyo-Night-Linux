@@ -1,0 +1,74 @@
+// vim:ts=4:sw=4:et
+{
+    "border": "pixel",
+    "current_border_width": 2,
+    "floating": "auto_off",
+    "geometry": {
+       "height": 996,
+       "width": 451,
+       "x": 0,
+       "y": 0
+    },
+    "marks": [],
+    "name": "nemoSHM",
+    "percent": 0.5,
+    "swallows": [
+       {
+         "class": "^Nemo$"
+       }
+    ],
+    "type": "con"
+}
+
+{
+    // splitv split container with 2 children
+    "border": "normal",
+    "floating": "auto_off",
+    "layout": "splitv",
+    "marks": [],
+    "percent": 0.5,
+    "type": "con",
+    "nodes": [
+        {
+            "border": "pixel",
+            "current_border_width": 2,
+            "floating": "auto_off",
+            "geometry": {
+               "height": 996,
+               "width": 451,
+               "x": 0,
+               "y": 0
+            },
+            "marks": [],
+            "name": "nemoConfig",
+            "percent": 0.5,
+            "swallows": [
+               {
+                  "class": "^Nemo$"
+               }
+            ],
+            "type": "con"
+        },
+        {
+            "border": "pixel",
+            "current_border_width": 2,
+            "floating": "auto_off",
+            "geometry": {
+               "height": 996,
+               "width": 451,
+               "x": 0,
+               "y": 0
+            },
+            "marks": [],
+            "name": "nemoSHM",
+            "percent": 0.5,
+            "swallows": [
+               {
+                  "class": "^Nemo$"
+               }
+            ],
+            "type": "con"
+        }
+    ]
+}
+

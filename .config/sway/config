@@ -187,7 +187,7 @@
 
     # Screenshot / share shortcuts
         bindsym Print exec "grim /home/marco/screenShares/Screenshot-$(date -Iseconds | cut -d'+' -f1).png"
-        bindsym $mod+Print exec "grim -g "$(slurp)" - | wl-copy"
+        bindsym $mod+Print exec grim -g "$(slurp)" - | wl-copy
         bindsym $mod+Shift+Print exec "wf-recorder -a -o eDP-1 -f /home/marco/screenShares/Screenstream-$(date -Iseconds | cut -d'+' -f1).mp4"
 
 

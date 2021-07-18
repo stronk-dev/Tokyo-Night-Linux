@@ -1,0 +1,14 @@
+# -- THEME AUTO-WRITTEN DO NOT EDIT
+include "/usr/share/themes/UltimateBlack-0.1/gtk-2.0/gtkrc"
+
+style "user-font" {
+	font_name = "Cantarell 11"
+}
+
+widget_class "*" style "user-font"
+
+gtk-font-name="Cantarell 11"
+
+include "/home/marco/.gtkrc.mine"
+
+# -- THEME AUTO-WRITTEN DO NOT EDIT
