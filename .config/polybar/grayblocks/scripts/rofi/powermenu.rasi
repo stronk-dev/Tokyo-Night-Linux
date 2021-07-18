@@ -25,7 +25,7 @@ window {
     transparency:                   "real";
     background-color:               @bg;
     text-color:                     @fg;
-	border:							0px 0px 4px 0px;
+	border:							1px 3px 5px 1px;
 	border-color:					@ac;
     border-radius:                  0px;
 	width:							300px;
