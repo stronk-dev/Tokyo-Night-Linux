@@ -107,7 +107,7 @@ The BetterDiscord files should be copied over after running ``betterdiscordctl i
 ## Screenshots
 
 ### I3 with Polybar
-
+![Screenshot-2021-07-19T23:10:44](https://user-images.githubusercontent.com/9502378/126227971-2ace7669-2043-40e3-977b-e7becee0808a.png)
 
 ### Sway with Waybar
 
