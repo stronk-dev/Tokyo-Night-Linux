@@ -19,9 +19,9 @@
 
     # Borders
         # Also removes all title bars
-        for_window [class="^.*"] border pixel 5
-        default_border pixel 5
-        default_floating_border pixel 5
+        for_window [class="^.*"] border pixel 3
+        default_border pixel 3
+        default_floating_border pixel 3
 
         # Hide borders at the edge of the screen
         hide_edge_borders smart
@@ -48,7 +48,7 @@
             # unfocused	    #333333	#222222	    #888888	#292d2e	    #222222
             # urgent	    #2f343a	#900000	    #ffffff	#900000	    #900000
             # placeholder	#000000	#0c0c0c	    #ffffff	#000000 	#0c0c0c
-        client.focused           #565f89 #565f89 #c0caf5 #565f89   #565f89
+        client.focused           #9aa5ce #364A82 #c0caf5 #9aa5ce   #9aa5ce
         client.focused_inactive  #16161d #16161d #c0caf5 #16161d   #16161d
         client.unfocused         #16161d #16161d #c0caf5 #16161d   #16161d
 
@@ -58,10 +58,10 @@
         # the inner affects spacing around each view
         # the outer affects the spacing around each workspace
         # To reduce or remove outer gaps, outer gaps can be set to a negative value.
-        gaps inner 0
-        gaps outer 0
-        gaps top 0
-        gaps bottom 0
+        gaps inner 5
+        gaps outer 2
+        gaps top 2
+        gaps bottom 2
 
         # Hide gaps when there is only 1 window
         smart_gaps on

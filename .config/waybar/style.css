@@ -23,14 +23,14 @@ window#waybar {
 
 #workspaces button {
     padding: 0 8px;
-    color: rgba(217, 216, 216, 0.4);
+    color: #565f89;
     border: 3px solid rgba(9, 85, 225, 0);
     border-radius: 10px;
     min-width: 33px;
 }
 
 #workspaces button.visible {
-    color: #364A82;
+    color: #a9b1d6;
 }
 
 #workspaces button.focused {
@@ -45,14 +45,17 @@ window#waybar {
 
 #workspaces button:hover {
     box-shadow: inherit;
-    border-color: #7dcfff;
-    color: #7dcfff;
+    border-color: #bb9af7;
+    color: #bb9af7;
 }
 
 /* Repeat style here to ensure properties are overwritten as there's no !important and button:hover above resets the colour */
 
 #workspaces button.focused {
     color: #7aa2f7;
+}
+#workspaces button.focused:hover {
+    color: #bb9af7;
 }
 
 #pulseaudio {
