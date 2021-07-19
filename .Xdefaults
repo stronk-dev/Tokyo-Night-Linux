@@ -44,9 +44,6 @@
 *.color7:        #a9b1d6
 *.color15:       #c0caf5
 
-*.color16:        #ff9e64
-*.color17:       #db4b4b
-
 ! xterm.vt100.faceName:           Terminus:style=Regular:size=10
 ! xterm.vt100.faceNameDoublesize: Cyberbit:style=Regular:size=10
 

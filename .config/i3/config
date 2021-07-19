@@ -12,7 +12,7 @@
         set $right l
 
     # Default Terminal
-        set $term urxvt
+        set $term st-256color
 
     # Autofocus on hover, also when switching workspaces
         focus_follows_mouse yes
@@ -245,10 +245,6 @@
 # NOTE: we are using autotiling based on window dimensions
 # See https://github.com/nwg-piotr/autotiling
     exec --no-startup-id autotiling &
-
-# Gnome Keyring
-    exec --no-startup-id eval $(gnome-keyring-daemon --start)
-    exec --no-startup-id export SSH_AUTH_SOCK
 
 # start initial programs
     exec --no-startup-id firefox &

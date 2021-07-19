@@ -276,10 +276,6 @@
 # Arch update notifications
     exec kalu 
 
-# Gnome Keyring
-    exec eval $(gnome-keyring-daemon --start)
-    exec export SSH_AUTH_SOCK
-
 # Clipboard manager
     exec wl-paste -t text --watch clipman store
 
