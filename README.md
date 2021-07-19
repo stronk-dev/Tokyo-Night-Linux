@@ -110,5 +110,10 @@ The BetterDiscord files should be copied over after running ``betterdiscordctl i
 ![Screenshot-2021-07-19T23:10:44](https://user-images.githubusercontent.com/9502378/126227971-2ace7669-2043-40e3-977b-e7becee0808a.png)
 
 ### Sway with Waybar
+![sway-discord](https://user-images.githubusercontent.com/9502378/126228226-fa59b3f1-2f30-41fb-9f7b-55f9c0d87d49.png)
+![sway-spotify](https://user-images.githubusercontent.com/9502378/126228240-548a0cba-04f0-4505-affc-9676b5f99288.png)
+![sway-code](https://user-images.githubusercontent.com/9502378/126228243-1cf4af9a-9eb1-4e51-a1ff-160fa44c0fa1.png)
+![sway-launcher-explorer](https://user-images.githubusercontent.com/9502378/126228245-4bb93c2f-e4c6-4d1e-9ffc-740860614c81.png)
+![sway-urxvt](https://user-images.githubusercontent.com/9502378/126228247-62197505-fb9f-43da-89d2-53c299df1563.png)
 
 
