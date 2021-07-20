@@ -17,9 +17,10 @@ else
 fi
 
 alias ls='ls --color=auto'
-alias clear='clear && neofetch | lolcat'
+alias info='clear && neofetch | lolcat'
 alias wisdom='fortune | cowsay | lolcat'
-alias screensaver='cbonsai --life 40 --multiplier 5 --time 0.1 --screensaver'
+alias bonsai='cbonsai --life 40 --live --multiplier 5 --time 0.1 --infinite'
+alias pipes='pipes -t 0 -p 3 -R -f 50 -r 6000'
 
 # Statusline plugin for vim, bash and others
 powerline-daemon -q

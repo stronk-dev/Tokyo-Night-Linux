@@ -1,6 +1,7 @@
 #!/bin/bash -e
 i3-msg "workspace 1; append_layout /home/marco/.config/i3/terminals.json"
-urxvt -name "cava" -e $SHELL -c "cava;$SHELL -i"&
+urxvt -name "audio" -e $SHELL -c "echo -en '\033]0;audio\a';cava;$SHELL -i"&
+urxvt -name "pipes" -e $SHELL -c "echo -en '\033]0;pipes\a';pipes -t 0 -p 3 -R -f 50 -r 6000;$SHELL -i"&
 urxvt -name "processes" -e $SHELL -c "echo -en '\033]0;processes\a';htop;$SHELL -i"&
 urxvt -name "info" -e $SHELL -c "cd /dev/shm;echo -en '\033]0;info\a';clear && neofetch | lolcat;fortune | cowsay | lolcat;$SHELL -i"&
-urxvt -name "screensaver" -e $SHELL -c "echo -en '\033]0;screensaver\a';cbonsai --life 40 --live --multiplier 5 --time 0.1 --infinite;$SHELL -i"&
+urxvt -name "bonsai" -e $SHELL -c "echo -en '\033]0;bonsai\a';cbonsai --life 40 --live --multiplier 5 --time 0.1 --infinite;$SHELL -i"&

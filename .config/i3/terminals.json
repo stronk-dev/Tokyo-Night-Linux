@@ -1,4 +1,6 @@
+// vim:ts=4:sw=4:et
 {
+    // splitv split container with 2 children
     "border": "normal",
     "floating": "auto_off",
     "layout": "splitv",
@@ -7,14 +9,16 @@
     "type": "con",
     "nodes": [
         {
+            // splith split container with 1 children
             "border": "normal",
             "floating": "auto_off",
             "layout": "splith",
             "marks": [],
-            "percent": 0.628846153846154,
+            "percent": 0.586538461538462,
             "type": "con",
             "nodes": [
                 {
+                    // splith split container with 2 children
                     "border": "pixel",
                     "floating": "auto_off",
                     "layout": "splith",
@@ -23,11 +27,12 @@
                     "type": "con",
                     "nodes": [
                         {
+                            // splith split container with 1 children
                             "border": "pixel",
                             "floating": "auto_off",
                             "layout": "splith",
                             "marks": [],
-                            "percent": 0.356051548729912,
+                            "percent": 0.372197382063245,
                             "type": "con",
                             "nodes": [
                                 {
@@ -42,9 +47,10 @@
                                     },
                                     "marks": [],
                                     "name": "processes",
-                                    "percent": null,
+                                    "percent": 1,
                                     "swallows": [
                                        {
+                                       "class": "^URxvt$",
                                        "title": "^processes$"
                                        }
                                     ],
@@ -53,19 +59,21 @@
                             ]
                         },
                         {
+                            // splith split container with 2 children
                             "border": "pixel",
                             "floating": "auto_off",
                             "layout": "splith",
                             "marks": [],
-                            "percent": 0.643948451270088,
+                            "percent": 0.627802617936755,
                             "type": "con",
                             "nodes": [
                                 {
+                                    // splith split container with 1 children
                                     "border": "pixel",
                                     "floating": "auto_off",
                                     "layout": "splith",
                                     "marks": [],
-                                    "percent": 0.586982506391744,
+                                    "percent": 0.478304576660488,
                                     "type": "con",
                                     "nodes": [
                                         {
@@ -80,9 +88,10 @@
                                             },
                                             "marks": [],
                                             "name": "info",
-                                            "percent": null,
+                                            "percent": 1,
                                             "swallows": [
                                                {
+                                               "class": "^URxvt$",
                                                "title": "^info$"
                                                }
                                             ],
@@ -91,11 +100,12 @@
                                     ]
                                 },
                                 {
+                                    // splitv split container with 1 children
                                     "border": "pixel",
                                     "floating": "auto_off",
                                     "layout": "splitv",
                                     "marks": [],
-                                    "percent": 0.413017493608256,
+                                    "percent": 0.521695423339512,
                                     "type": "con",
                                     "nodes": [
                                         {
@@ -109,11 +119,12 @@
                                                "y": 0
                                             },
                                             "marks": [],
-                                            "name": "screensaver",
-                                            "percent": null,
+                                            "name": "bonsai",
+                                            "percent": 1,
                                             "swallows": [
                                                {
-                                               "title": "^screensaver$"
+                                               "class": "^URxvt$",
+                                               "title": "^bonsai$"
                                                }
                                             ],
                                             "type": "con"
@@ -127,11 +138,12 @@
             ]
         },
         {
+            // splith split container with 2 children
             "border": "normal",
             "floating": "auto_off",
             "layout": "splith",
             "marks": [],
-            "percent": 0.371153846153846,
+            "percent": 0.413461538461538,
             "type": "con",
             "nodes": [
                 {
@@ -145,12 +157,33 @@
                        "y": 0
                     },
                     "marks": [],
-                    "name": "audio output",
-                    "percent": 1,
+                    "name": "audio",
+                    "percent": 0.671875,
                     "swallows": [
                        {
                        "class": "^URxvt$",
-                       "title": "^cava$"
+                       "title": "^audio$"
+                       }
+                    ],
+                    "type": "con"
+                },
+                {
+                    "border": "pixel",
+                    "current_border_width": 3,
+                    "floating": "auto_off",
+                    "geometry": {
+                       "height": 388,
+                       "width": 564,
+                       "x": 0,
+                       "y": 0
+                    },
+                    "marks": [],
+                    "name": "pipes",
+                    "percent": 0.328125,
+                    "swallows": [
+                       {
+                       "class": "^URxvt$",
+                       "title": "^pipes$"
                        }
                     ],
                     "type": "con"
