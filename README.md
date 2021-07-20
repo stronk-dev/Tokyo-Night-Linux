@@ -103,6 +103,7 @@ If using polybar-themes, install it from the original source first to get all th
 - Discord: After running ``betterdiscordctl install`` go into the newly added Better Discord entry in the settings menu.
 - GDM: Run ``gnomeconf2gdm`` (from gdm-tools-git) after applying the GTK theme to set the colour scheme of the login screen
 ### Notes
+- GDM does not start .xinitrc . If you are using I3, it is easier to just type in ``startx`` after logging in
 - Certain GTK programs, like Gimp and Firefox, might have to be set to follow the system theme from their settings
 - A modified version of <a href="https://aur.archlinux.org/packages/console-solarized-git/">console-solarized-git</a> is coming in order to modify the Linux shell colours to match our theme.
 
