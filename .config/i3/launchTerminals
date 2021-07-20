@@ -3,4 +3,4 @@ i3-msg "workspace 1; append_layout /home/marco/.config/i3/workspace-1.json"
 urxvt -name "termDocuments" -e $SHELL -c 'cd /home/marco/Documents;$SHELL -i'&
 urxvt -name "termHome" -e $SHELL -c 'cd /home/marco/;neofetch | lolcat;$SHELL -i'&
 urxvt -name "termConfig" -e $SHELL -c 'cd /home/marco/.config;htop;$SHELL -i'&
-urxvt -name "termDownloads" -e $SHELL -c 'cd /home/marco/Downloads;$SHELL -i'&
+urxvt -name "termDownloads" -e $SHELL -c 'cd /home/marco/Downloads/;fortune | cowsay | lolcat;$SHELL -i'&

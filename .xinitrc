@@ -60,6 +60,6 @@ eval $(keychain --systemd -q --eval)
 
 #start thing for transparency
 #picom --config /home/marco/.config/picom/picom.conf &
-#picom --config /home/marco/.config/picom/picom.conf -b --experimental-backends  &
+picom --config /home/marco/.config/picom/picom.conf -b --experimental-backends  &
 #Start i3
 exec i3

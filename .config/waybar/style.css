@@ -14,7 +14,7 @@ window#waybar {
     text-shadow: none;
     transition-duration: 0s;
     color: rgba(217, 216, 216, 1);
-    background: rgba(22, 22, 30, 1.0); 
+    background: #1a1b26; 
 } 
 
 #workspaces {

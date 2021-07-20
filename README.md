@@ -1,6 +1,6 @@
 # Tokyo Night Linux theme
 
-This collection is aimed to make your Linux environment look like the vscode <a href="https://github.com/enkia/tokyo-night-vscode-theme">Tokyo Night</a> theme. This is currently still a WIP, as most of the configuration is based off of modifying existing themes.
+This collection is aimed to make your Linux environment look like the vscode <a href="https://github.com/enkia/tokyo-night-vscode-theme">Tokyo Night</a> theme. This is currently still a WIP, so expect colour  or unthemed applications. 
 
 Although replacing your icon theme or cursor is not required, this theme goes well with the <a href="https://github.com/numixproject/numix-icon-theme">Numix</a> icon theme goes well with this theme.
 
@@ -16,6 +16,7 @@ Theming
 - spicetify-cli: Used to apply the Spotify theme
 - betterdiscord: Used to apply the Discord theme
 - betterdiscord-ctk: Used to install betterdiscord
+- <a href="https://github.com/enkia/tokyo-night-vscode-theme">VS code Tokyo Night theme</a>
 
 Optional Utils
 - st: The terminal we are using in our configs. Requires<a href="ttps://wiki.archlinux.org/title/st#Patches">patches</a> to get it good. urxvt can be used as an alternative and is themed using the config files.
@@ -32,7 +33,7 @@ Optional Utils
 
 When using I3 as window manager
 - clipit: Clipboard manager
-- picom: If you want transparency
+- picom: If you want transparent and rounded borders in I3
 - polybar: Status bar
 - polybar-themes: Is included in the repo, but should be installed separately as well to get all their dependencies.
 - autotiling: Automatically sets in which direction a window will split based on if the parent container is wider or taller
@@ -60,7 +61,7 @@ When using Sway as window manager
     - gtk-3.0: Sets some theme settings
     - i3: Example i3 config with auto starting applications, borders and gaps settings, etc
     - kanshi: Example config for using Kanshi to set your wayland monitors
-    - Picom: Example config for enabling transparency when using I3. Not updated to match the theme at this moment
+    - Picom: Example config for enabling transparency and rounded corners when using I3.
     - Polybar: Theme and config for the status bar when using I3 with modules n shit enabled
     - Spicetify: Contains theme for modifying Spotify
     - Sway: Example sway config with auto starting applications, borders and gaps settings, etc
@@ -80,7 +81,7 @@ When using Sway as window manager
 - Spotify: Manually edit ./config/spicetify/Themes/Base/color.ini
 - Discord: There is an <a href="https://limeshark.dev/editor/Nocturnal">online editor</a> to edit all the themes
 - Polybar comes bundled with various modules. Check out their  for more info. Also check out the <a href="https://github.com/adi1090x/polybar-themes#readme">readme</a> of polybar-themes if you are using I3.
-- Picom can be turned on to enable transparency for I3
+- Picom can be be configured for more or less transparency or different kinds of blur. The included config uses dual-kawase blur which goes over an image as background
 
 ## Installation
 ### Copying files
