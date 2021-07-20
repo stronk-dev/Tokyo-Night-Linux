@@ -21,9 +21,9 @@
 
 # The number of bars (0-200). 0 sets it to auto (fill up console).
 # Bars' width and space between bars in number of characters.
-; bars = 0
-; bar_width = 2
-; bar_spacing = 1
+bars = 0
+bar_width = 1
+bar_spacing = 0
 
 
 # Lower and higher cutoff frequencies for lowest and highest bars
@@ -142,7 +142,7 @@ waves = 1
 
 # Set gravity percentage for "drop off". Higher values means bars will drop faster.
 # Accepts only non-negative values. 50 means half gravity, 200 means double. Set to 0 to disable "drop off".
-gravity = 60
+gravity = 100
 
 
 # In bar height, bars that would have been lower that this will not be drawn.
