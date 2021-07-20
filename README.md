@@ -32,7 +32,7 @@ Optional Utils
 
 When using I3 as window manager
 - clipit: Clipboard manager
-- picom: If you want transparent and rounded borders in I3
+- picom-ibhagwan-git: If you want transparent and rounded borders in I3
 - polybar: Status bar
 - polybar-themes: Is included in the repo, but should be installed separately as well to get all their dependencies.
 - autotiling: Automatically sets in which direction a window will split based on if the parent container is wider or taller
