@@ -24,6 +24,8 @@ Optional Utils
 - gvim: Contains vim with clipboard support and more
 - vim-airline: Status bar for vim
 - neofetch, lolcat, cowsay, wisdom-mod: important stuff
+- kava: console based audio visualizer
+- cbonsai: if you want to grow bonsai trees in your terminal
 - nm-applet: manage your (wireless) connections and has a tray icon
 - kalu-kde: Notifies you about Arch news or updates and has a tray icon
 - logiops: Used to trigger keyboard combinations using gestures

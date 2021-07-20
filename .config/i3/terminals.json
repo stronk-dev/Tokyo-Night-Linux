@@ -1,0 +1,162 @@
+{
+    "border": "normal",
+    "floating": "auto_off",
+    "layout": "splitv",
+    "marks": [],
+    "percent": 1,
+    "type": "con",
+    "nodes": [
+        {
+            "border": "normal",
+            "floating": "auto_off",
+            "layout": "splith",
+            "marks": [],
+            "percent": 0.628846153846154,
+            "type": "con",
+            "nodes": [
+                {
+                    "border": "pixel",
+                    "floating": "auto_off",
+                    "layout": "splith",
+                    "marks": [],
+                    "percent": 1,
+                    "type": "con",
+                    "nodes": [
+                        {
+                            "border": "pixel",
+                            "floating": "auto_off",
+                            "layout": "splith",
+                            "marks": [],
+                            "percent": 0.356051548729912,
+                            "type": "con",
+                            "nodes": [
+                                {
+                                    "border": "pixel",
+                                    "current_border_width": 3,
+                                    "floating": "auto_off",
+                                    "geometry": {
+                                       "height": 340,
+                                       "width": 564,
+                                       "x": 0,
+                                       "y": 0
+                                    },
+                                    "marks": [],
+                                    "name": "processes",
+                                    "percent": null,
+                                    "swallows": [
+                                       {
+                                       "title": "^processes$"
+                                       }
+                                    ],
+                                    "type": "con"
+                                }
+                            ]
+                        },
+                        {
+                            "border": "pixel",
+                            "floating": "auto_off",
+                            "layout": "splith",
+                            "marks": [],
+                            "percent": 0.643948451270088,
+                            "type": "con",
+                            "nodes": [
+                                {
+                                    "border": "pixel",
+                                    "floating": "auto_off",
+                                    "layout": "splith",
+                                    "marks": [],
+                                    "percent": 0.586982506391744,
+                                    "type": "con",
+                                    "nodes": [
+                                        {
+                                            "border": "pixel",
+                                            "current_border_width": 3,
+                                            "floating": "auto_off",
+                                            "geometry": {
+                                               "height": 460,
+                                               "width": 724,
+                                               "x": 0,
+                                               "y": 0
+                                            },
+                                            "marks": [],
+                                            "name": "info",
+                                            "percent": null,
+                                            "swallows": [
+                                               {
+                                               "title": "^info$"
+                                               }
+                                            ],
+                                            "type": "con"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "border": "pixel",
+                                    "floating": "auto_off",
+                                    "layout": "splitv",
+                                    "marks": [],
+                                    "percent": 0.413017493608256,
+                                    "type": "con",
+                                    "nodes": [
+                                        {
+                                            "border": "pixel",
+                                            "current_border_width": 3,
+                                            "floating": "auto_off",
+                                            "geometry": {
+                                               "height": 460,
+                                               "width": 724,
+                                               "x": 0,
+                                               "y": 0
+                                            },
+                                            "marks": [],
+                                            "name": "screensaver",
+                                            "percent": null,
+                                            "swallows": [
+                                               {
+                                               "title": "^screensaver$"
+                                               }
+                                            ],
+                                            "type": "con"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "border": "normal",
+            "floating": "auto_off",
+            "layout": "splith",
+            "marks": [],
+            "percent": 0.371153846153846,
+            "type": "con",
+            "nodes": [
+                {
+                    "border": "pixel",
+                    "current_border_width": 3,
+                    "floating": "auto_off",
+                    "geometry": {
+                       "height": 340,
+                       "width": 564,
+                       "x": 0,
+                       "y": 0
+                    },
+                    "marks": [],
+                    "name": "audio output",
+                    "percent": 1,
+                    "swallows": [
+                       {
+                       "class": "^URxvt$",
+                       "title": "^cava$"
+                       }
+                    ],
+                    "type": "con"
+                }
+            ]
+        }
+    ]
+}
+

@@ -1,6 +1,6 @@
 #!/bin/bash -e
-i3-msg "workspace 1; append_layout /home/marco/.config/i3/workspace-1.json"
-urxvt -name "termDocuments" -e $SHELL -c 'cd /home/marco/Documents;$SHELL -i'&
-urxvt -name "termHome" -e $SHELL -c 'cd /home/marco/;neofetch | lolcat;$SHELL -i'&
-urxvt -name "termConfig" -e $SHELL -c 'cd /home/marco/.config;htop;$SHELL -i'&
-urxvt -name "termDownloads" -e $SHELL -c 'cd /home/marco/Downloads/;fortune | cowsay | lolcat;$SHELL -i'&
+i3-msg "workspace 1; append_layout /home/marco/.config/i3/terminals.json"
+urxvt -name "cava" -e $SHELL -c 'cava;$SHELL -i'&
+urxvt -name "processes" -e $SHELL -c "echo -en '\033]0;processes\a';htop;$SHELL -i"&
+urxvt -name "info" -e $SHELL -c "cd /dev/shm;echo -en '\033]0;info\a';clear && neofetch | lolcat;fortune | cowsay | lolcat;$SHELL -i"&
+urxvt -name "screensaver" -e $SHELL -c "echo -en '\033]0;screensaver\a';cbonsai --life 40 --live --multiplier 5 --time 0.1 --infinite;$SHELL -i"&
