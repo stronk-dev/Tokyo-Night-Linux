@@ -2,7 +2,7 @@
 
 This collection is aimed to make your Linux environment look like the vscode <a href="https://github.com/enkia/tokyo-night-vscode-theme">Tokyo Night</a> theme. This is currently still a WIP, so expect colour  or unthemed applications. 
 
-Although replacing your icon theme or cursor is not required, this theme goes well with the <a href="https://github.com/numixproject/numix-icon-theme">Numix</a> icon theme goes well with this theme.
+Although replacing your icon theme or cursor is not required, this theme goes well with the <a href="https://github.com/numixproject/numix-icon-theme">Numix</a> icon theme.
 
 The GTK theme was made by modifying the <a href="https://www.gnome-look.org/p/1316887">Material Black</a> theme
 
@@ -15,16 +15,15 @@ Theming
 - gnome-tweaks: Can be used to apply the GTK theme
 - spicetify-cli: Used to apply the Spotify theme
 - betterdiscord: Used to apply the Discord theme
-- betterdiscord-ctk: Used to install betterdiscord
+- betterdiscordctl: Used to install betterdiscord
 - <a href="https://github.com/enkia/tokyo-night-vscode-theme">VS code Tokyo Night theme</a>
 
 Optional Utils
-- st: The terminal we are using in our configs. Requires<a href="ttps://wiki.archlinux.org/title/st#Patches">patches</a> to get it good. urxvt can be used as an alternative and is themed using the config files.
+- st: The terminal we are using in our configs. Requires <a href="https://wiki.archlinux.org/title/st#Patches">patches</a> to get it good. urxvt can be used as an alternative and is themed using the included config files.
 - powerline: Status bar for Bash. For example, it shows you what Git repo you are in
 - gvim: Contains vim with clipboard support and more
 - vim-airline: Status bar for vim
-- neofetch: Very important for screenshots
-- lolcat, cowsay, wisdom-mod: very important stuff
+- neofetch, lolcat, cowsay, wisdom-mod: important stuff
 - nm-applet: manage your (wireless) connections and has a tray icon
 - kalu-kde: Notifies you about Arch news or updates and has a tray icon
 - logiops: Used to trigger keyboard combinations using gestures
@@ -80,7 +79,7 @@ When using Sway as window manager
 - GTK theme: If certain colours aren't to your liking, you can `` grep -rl "old_string" . | xargs sed -i 's/old_string/new_string/g' `` to replace specific colour codes quickly. If you go this route you might want to do this to the <a href="https://www.gnome-look.org/p/1316887">source</a>, since the original theme has more different colours.
 - Spotify: Manually edit ./config/spicetify/Themes/Base/color.ini
 - Discord: There is an <a href="https://limeshark.dev/editor/Nocturnal">online editor</a> to edit all the themes
-- Polybar comes bundled with various modules. Check out their  for more info. Also check out the <a href="https://github.com/adi1090x/polybar-themes#readme">readme</a> of polybar-themes if you are using I3.
+- Polybar comes bundled with various modules. Check out their <a href="https://github.com/polybar/polybar/wiki">wiki</a> for more info. Also check out the <a href="https://github.com/adi1090x/polybar-themes#readme">readme</a> of polybar-themes if you are using I3.
 - Picom can be be configured for more or less transparency or different kinds of blur. The included config uses dual-kawase blur which goes over an image as background
 
 ## Installation
@@ -91,7 +90,6 @@ All the files go into your home directory, except for:
 
 If using polybar-themes, install it from the original source first to get all their dependencies and fonts. Then you can overwrite their files with the included ones.
 
-The BetterDiscord files should be copied over after running ``betterdiscordctl install``
 ### Apply Theme
 - GTK: Run lxappearance and/or gnome-tweaks and select the included theme
 - Spotify:
@@ -108,8 +106,13 @@ The BetterDiscord files should be copied over after running ``betterdiscordctl i
 ## Screenshots
 
 ### I3 with Polybar
-
+![Screenshot-2021-07-19T23:10:44](https://user-images.githubusercontent.com/9502378/126227971-2ace7669-2043-40e3-977b-e7becee0808a.png)
 
 ### Sway with Waybar
+![sway-discord](https://user-images.githubusercontent.com/9502378/126228226-fa59b3f1-2f30-41fb-9f7b-55f9c0d87d49.png)
+![sway-spotify](https://user-images.githubusercontent.com/9502378/126228240-548a0cba-04f0-4505-affc-9676b5f99288.png)
+![sway-code](https://user-images.githubusercontent.com/9502378/126228243-1cf4af9a-9eb1-4e51-a1ff-160fa44c0fa1.png)
+![sway-launcher-explorer](https://user-images.githubusercontent.com/9502378/126228245-4bb93c2f-e4c6-4d1e-9ffc-740860614c81.png)
+![sway-urxvt](https://user-images.githubusercontent.com/9502378/126228247-62197505-fb9f-43da-89d2-53c299df1563.png)
 
 
