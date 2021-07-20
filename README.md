@@ -43,6 +43,7 @@ When using I3 as window manager
 - maim: screen capture
 - xclip: X selection to clipboard
 - bynanz: record screen to gif
+- hsetroot: to change the background colour when picom is running
 
 When using Sway as window manager
 - autotiling: Automatically sets in which direction a window will split based on if the parent container is wider or taller

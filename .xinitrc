@@ -32,7 +32,7 @@ xset -dpms
 
 # display wallpaper during loading
 # feh --bg-fill /home/marco/Images/wallpaper.jpg
-xsetroot -solid "#16161e"
+hsetroot -solid "#16161e"
 
 #Recover volumes
 alsactl init
