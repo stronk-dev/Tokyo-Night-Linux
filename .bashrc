@@ -16,6 +16,8 @@ else
         export TERM='st'
 fi
 
+alias repos='cd /mnt/koios/repos/'
+alias stats='bpytop'
 alias ls='ls --color=auto'
 alias info='clear && neofetch | lolcat'
 alias wisdom='fortune | cowsay | lolcat'

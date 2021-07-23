@@ -1,8 +1,8 @@
 # Tokyo Night Linux theme
 
-This collection is aimed to make your Linux environment look like the vscode <a href="https://github.com/enkia/tokyo-night-vscode-theme">Tokyo Night</a> theme. This is currently still a WIP, so expect colour  or unthemed applications. 
+This collection is aimed to make your Linux environment look like the vscode <a href="https://github.com/enkia/tokyo-night-vscode-theme">Tokyo Night</a> theme. This is currently still a WIP, so expect colour inconsistencies or unthemed applications. 
 
-Although replacing your icon theme or cursor is not required, this theme goes well with the <a href="https://github.com/numixproject/numix-icon-theme">Numix</a> icon theme.
+Although replacing your icon theme is not required, this theme goes well with the <a href="https://github.com/numixproject/numix-icon-theme">Numix</a> icon theme.
 
 The GTK theme was made by modifying the <a href="https://www.gnome-look.org/p/1316887">Material Black</a> theme
 
@@ -24,6 +24,7 @@ Optional Utils
 - gvim: Contains vim with clipboard support and more
 - vim-airline: Status bar for vim
 - kava, neofetch, lolcat, cowsay, wisdom-mod, bash-pipes, cbonsai: important stuff
+- bpytop: resource monitor
 - nm-applet: manage your (wireless) connections and has a tray icon
 - kalu-kde: Notifies you about Arch news or updates and has a tray icon
 - logiops: Used to trigger keyboard combinations using gestures
