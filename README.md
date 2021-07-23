@@ -19,7 +19,7 @@ Theming
 - <a href="https://github.com/enkia/tokyo-night-vscode-theme">VS code Tokyo Night theme</a>
 
 Optional Utils
-- st: The terminal we are using in our configs. Requires <a href="https://wiki.archlinux.org/title/st#Patches">patches</a> to get it good. urxvt can be used as an alternative and is themed using the included config files.
+- st: The terminal we are using in our configs. Requires <a href="https://wiki.archlinux.org/title/st#Patches">patches</a> to get it good, but pre-patched versions can be found <a href="https://github.com/LukeSmithxyz/st">on github</a> . urxvt can be used as an alternative and is themed using the included config files.
 - powerline: Status bar for Bash. For example, it shows you what Git repo you are in
 - gvim: Contains vim with clipboard support and more
 - vim-airline: Status bar for vim
