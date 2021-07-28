@@ -1,6 +1,6 @@
-*.foreground:    #ABB2BF
-*.background:    #1E2127
-*.cursorColor:   #5C6370
+*.foreground:    #A9B1D6
+*.background:    #1A1B26
+*.cursorColor:   #A9B1D6
 *.highlightColor:#3A3F4B
 
 !*fading:                  40
@@ -20,29 +20,29 @@
 ! 7 White     15 White
 
 ! Black colours
-*.color0:        #1E2127
-*.color8:        #5C6370
+*.color0:        #1A1B26
+*.color8:        #4E5173
 ! Red colours
-*.color1:        #E06C75
+*.color1:        #F7768E
 *.color9:        #E06C75
 ! Yellow colours
-*.color2:        #98C379
-*.color10:       #98C379
+*.color2:        #E0AF68
+*.color10:       #D19A66
 ! Green colours
-*.color3:        #D19A66
-*.color11:       #D19A66
+*.color3:        #9ECE6A
+*.color11:       #98C379
 ! Blue colours
-*.color4:        #61AFEF
+*.color4:        #7AA2F7
 *.color12:       #61AFEF
 ! Magenta (pink, !green) colours
-*.color5:        #C678DD
+*.color5:        #9A7ECC
 *.color13:       #C678DD
 ! Cyan (blue + green)
-*.color6:        #56B6C2
+*.color6:        #4ABAAF
 *.color14:       #56B6C2
 ! White colours
-*.color7:        #ABB2BF
-*.color15:       #FFFFFF
+*.color7:        #ACB0D0
+*.color15:       #ABB2BF
 
 ! xterm.vt100.faceName:           Terminus:style=Regular:size=10
 ! xterm.vt100.faceNameDoublesize: Cyberbit:style=Regular:size=10
