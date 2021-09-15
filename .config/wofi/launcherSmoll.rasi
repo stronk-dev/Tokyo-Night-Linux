@@ -88,12 +88,15 @@ element {
 
 element-icon {
     size:                           24px;
+    background-color:               transparent;
     border:                         0px;
 }
 
 element-text {
     expand:                         true;
     horizontal-align:               0;
+    background-color:               transparent;
+    text-color:                     @fg;
     vertical-align:                 0.5;
     margin:                         0px 2.5px 0px 2.5px;
 }
