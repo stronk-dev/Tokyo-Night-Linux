@@ -71,7 +71,7 @@
 ###         Menu for commands        ###
 
     # Program Launcher
-        bindsym $mod+d exec rofi -no-config -no-lazy-grab -show drun -modi drun -theme ~/.config/polybar/grayblocks/scripts/rofi/launcher.rasi
+        bindsym $mod+d exec rofi -no-config -no-lazy-grab -show drun -modi drun -theme ~/.config/wofi/launcher.rasi
 
     # Power menu
         bindsym $mod+P exec /home/marco/.config/wofi/wofi-power.sh
