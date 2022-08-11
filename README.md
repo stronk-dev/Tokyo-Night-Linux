@@ -6,7 +6,9 @@ Although replacing your icon theme is not required, this theme goes well with th
 
 The GTK theme was made by modifying the <a href="https://www.gnome-look.org/p/1316887">Material Black</a> theme
 
-The included Discord theme is pulled from here <a href="https://github.com/Dyzean/Tokyo-Night">Tokyo Night</a>
+The included Discord theme is pulled from here <a href="https://github.com/Dyzean/Tokyo-Night">Tokyo Night</a> (Credits to @Dyzean for the suggestion)
+
+If you are using KDE Plasma, you can use the <a href="https://gitlab.com/ObsidianChickenz/kvantum-tokyo-night-theme">Kvantum Tokyo Night</a> theme (Credits to @JuniorSuperTux for the suggestion)
 
 ## Dependencies
 
