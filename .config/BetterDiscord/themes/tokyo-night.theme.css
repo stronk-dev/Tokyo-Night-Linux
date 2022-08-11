@@ -1,0 +1,136 @@
+/**
+ * @name Tokyo Night
+ * @description Discord Port of Visual Studio Code Theme
+ * @author Ashtrath
+ * @version 1.0.0
+ * @authorId 2354831939099688962
+ */
+
+/* DONT TOUCH THIS!!! */
+@import url("https://dyzean.github.io/Tokyo-Night/main.css");
+
+/*  Read this before editing stuff!!!
+*
+*   > To comment or uncomment a line you need to put those "/" and "*" characters as you can see at the beginning and ending of my comments.
+*      (You don't need to put a * at each line like I do, it's just for readability). See more here : https://developer.mozilla.org/en-US/docs/Web/CSS/Comments
+*
+*   > You can play with the values and see how it goes, don't delete "px" after the value if you don't have knowledges in CSS.
+*
+*   > To change the colors, replace the HEX code with the one you picked here : https://htmlcolorcodes.com
+*/
+
+/* Optional Addons */
+@import url("https://goose-nest.github.io/GT-RevertRebrand/RevertRebrand.theme.css");
+@import url("https://nyri4.github.io/Discolored/main.css");
+
+/* Mac Titlebar, Delete the line below if you want the normal titlebar */
+.withFrame-haYltI { margin: 0; height: 24px; } .typeWindows-1za-n7 { flex-direction: row; margin-left: 3px !important; } .withFrame-haYltI .winButton-iRh8-Z > svg { display: none; } .withFrame-haYltI .winButton-iRh8-Z:hover { background-color: var(--background-teritary); } .withFrame-haYltI .winButton-iRh8-Z { pointer-events: none; margin-left: -4px; top: 0; } .withFrame-haYltI .winButton-iRh8-Z::after { content: ""; padding: 7px; border-radius: 50px; pointer-events: fill; transition-duration: 200ms; } .withFrame-haYltI .winButtonClose-1HsbF-::after { background-color: #e92a2ade !important; margin-top: 0px; } .withFrame-haYltI .winButtonMinMax-PBQ2gm:nth-child(3)::after { background-color: #f7bc1bde !important; margin-top: 0px; } .withFrame-haYltI .winButtonMinMax-PBQ2gm:nth-child(4):after { background-color: #12db33de !important; margin-top: 0px; } .typeWindows-1za-n7 > div:hover::after { transform: scale(1.1); }
+
+/* ---- Discord Variables ---- */
+.theme-dark { /* Dark Mode */
+
+  /*  Header Color  */
+  --header-primary: #fff;
+  --header-secondary: #b9bbbe;
+
+  /*  Text Color  */
+  --text-normal: #dcddde;
+  --text-muted: #72767d;
+  --interactive-normal: #6f738e;
+  --interactive-hover: #a6aac5;
+  --interactive-active: #aeb4cf;
+  --interactive-muted: #484a57;
+
+  /* Background Color */
+  --background-primary: #1a1b26;
+  --background-secondary: #171722;
+  --background-secondary-alt: #13131a;
+  --background-tertiary: #16161e;
+  --background-tertiary-alt: #13131a;
+  --background-accent: #434461;
+  --background-floating: #161620;
+  --background-modifier-hover: #212331c0;
+  --background-modifier-active: #282a3680;
+  --background-modifier-selected: #24263171;
+  --background-modifier-accent: #21212c;
+  --background-mentioned: #252836;
+  --border-mentioned: #474c64;
+  --background-mentioned-hover: #2f3344;
+  --accent-color: #365aaa;
+
+  /* Folder Color */
+  --folder-color: #272a36d0;
+  --folder-color-light: #2f3342d0;
+
+  /* Input Box Color */
+  --input-box-bg: #14141b;
+  --input-box-border: #0f0f14;
+  --input-box-border-focus: #1b1c26;
+
+  /* Scrollbars Color */
+  --scrollbar-thin-thumb: transparent;
+  --scrollbar-thin-track: transparent;
+  --scrollbar-auto-thumb: #2b2b46af;
+  --scrollbar-auto-thumb-hover: #27273d85;
+  --scrollbar-auto-track: transparent;
+  --scrollbar-auto-scrollbar-color-thumb: var(--scrollbar-auto-thumb);
+  --scrollbar-auto-scrollbar-color-track: var(--scrollbar-auto-track);
+
+  /* Chat Box Color */
+  --channeltextarea-background: var(--background-secondary);
+  --channeltextarea-background-hover: var(--background-tertiary);
+}
+
+.theme-light { /* Light Mode */
+
+  /*  Header Color  */
+  --header-primary: #1c1c1d;
+  --header-secondary: #4f5660;
+
+  /*  Text Color  */
+  --text-normal: #2e3338;
+  --text-muted: #747f8d;
+  --interactive-normal: #4c505e;
+  --interactive-hover: #404350;
+  --interactive-active: #373a44;
+  --interactive-muted: #77797c;
+
+  /* Background Color */
+  --background-primary: #d5d6db;
+  --background-secondary: #cecfd4;
+  --background-secondary-alt: #b6b7bd;
+  --background-tertiary: #c5c6cc;
+  --background-tertiary-alt: #bbbbc2;
+  --background-accent: #9ca3bb;
+  --background-floating: #c2c2c9;
+  --background-mentioned: #c4c7da;
+  --background-modifier-hover: #2c2a2a25;
+  --background-modifier-active: #5a525229;
+  --background-modifier-selected: #555e693d;
+  --background-modifier-accent: #06060714;
+  --border-mentioned: #a9afcf;
+  --background-mentioned-hover: #cfd2e9;
+  --accent-color: #365aaa;
+
+  /* Folder Color */
+  --folder-color: #a7a6a6d0;
+  --folder-color-light: #afafafd0;
+
+  /* Input Box Color */
+  --input-box-bg: #c2c2c7;
+  --input-box-border: #b3b4b8;
+  --input-box-border-focus: #959699;
+
+  /* Scrollbars Color */
+  --scrollbar-thin-thumb: transparent;
+  --scrollbar-thin-track: transparent;
+  --scrollbar-auto-thumb: #a0a0a0af;
+  --scrollbar-auto-thumb-hover: #77777785;
+  --scrollbar-auto-track: transparent;
+  --scrollbar-auto-scrollbar-color-thumb: var(--scrollbar-auto-thumb);
+  --scrollbar-auto-scrollbar-color-track: var(--scrollbar-auto-track);
+
+  /* Chat Box Color */
+  --channeltextarea-background: var(--background-secondary);
+  --channeltextarea-background-hover: var(--background-tertiary);
+}

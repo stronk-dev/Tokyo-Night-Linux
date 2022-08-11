@@ -6,7 +6,7 @@ Although replacing your icon theme is not required, this theme goes well with th
 
 The GTK theme was made by modifying the <a href="https://www.gnome-look.org/p/1316887">Material Black</a> theme
 
-The discord theme was made by modifying the <a href="https://betterdiscord.app/theme/Nocturnal">Nocturnal</a> theme
+The included Discord theme is pulled from here <a href="https://github.com/Dyzean/Tokyo-Night">Tokyo Night</a>
 
 ## Dependencies
 
@@ -19,10 +19,7 @@ Theming
 - <a href="https://github.com/enkia/tokyo-night-vscode-theme">VS code Tokyo Night theme</a>
 
 Optional Utils
-- st: The terminal we are using in our configs. Requires <a href="https://wiki.archlinux.org/title/st#Patches">patches</a> to get it good, but pre-patched versions can be found <a href="https://github.com/LukeSmithxyz/st">on github</a> . urxvt can be used as an alternative and is themed using the included config files.
 - powerline: Status bar for Bash. For example, it shows you what Git repo you are in
-- gvim: Contains vim with clipboard support and more
-- vim-airline: Status bar for vim
 - kava, neofetch, lolcat, cowsay, wisdom-mod, bash-pipes, cbonsai: important stuff
 - bpytop: resource monitor
 - nm-applet: manage your (wireless) connections and has a tray icon
@@ -66,7 +63,7 @@ When using Sway as window manager
     - Polybar: Theme and config for the status bar when using I3 with modules n shit enabled
     - Spicetify: Contains theme for modifying Spotify
     - Sway: Example sway config with auto starting applications, borders and gaps settings, etc
-    - Polybar: Theme and config for the status bar when using Sway
+    - Waybar: Theme and config for the status bar when using Sway
     - Wofi: Actually contains an example config and theme for Rofi and Wofi, although we are using Rofi in the configs
 
 - /etc/logid.conf: Optional example configuration for the Logitech MX Master mouse, using gestures to call certain key combinations set in the I3/Sway config
@@ -80,7 +77,6 @@ When using Sway as window manager
 ### Configuration
 - GTK theme: If certain colours aren't to your liking, you can `` grep -rl "old_string" . | xargs sed -i 's/old_string/new_string/g' `` to replace specific colour codes quickly. If you go this route you might want to do this to the <a href="https://www.gnome-look.org/p/1316887">source</a>, since the original theme has more different colours.
 - Spotify: Manually edit ./config/spicetify/Themes/Base/color.ini
-- Discord: There is an <a href="https://limeshark.dev/editor/Nocturnal">online editor</a> to edit all the themes
 - Polybar comes bundled with various modules. Check out their <a href="https://github.com/polybar/polybar/wiki">wiki</a> for more info. Also check out the <a href="https://github.com/adi1090x/polybar-themes#readme">readme</a> of polybar-themes if you are using I3.
 - Picom can be be configured for more or less transparency or different kinds of blur. The included config uses dual-kawase blur which goes over an image as background
 
@@ -88,7 +84,7 @@ When using Sway as window manager
 ### Copying files
 All the files go into your home directory, except for:
 - /etc/logid.conf
-- /usr/share/themes/UltimateBlack-0.1
+- /usr/share/themes/TokyoNight
 
 If using polybar-themes, install it from the original source first to get all their dependencies and fonts. Then you can overwrite their files with the included ones.
 
