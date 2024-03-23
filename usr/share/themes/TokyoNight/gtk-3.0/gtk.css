@@ -6889,7 +6889,8 @@ XfdesktopIconView.view .rubberband {
   border-top: 1px solid rgba(204, 204, 204, 0.12);
 }
 
-.thunar treeview .view:selected {
+.thunar treeview .view:selected,
+.thunar widget .view:active {
   background-color: transparent;
 }
 
