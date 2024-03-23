@@ -6889,6 +6889,10 @@ XfdesktopIconView.view .rubberband {
   border-top: 1px solid rgba(204, 204, 204, 0.12);
 }
 
+.thunar treeview .view:selected {
+  background-color: transparent;
+}
+
 /************************
  * LightDM GTK+ Greeter *
  ************************/
