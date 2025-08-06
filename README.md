@@ -22,7 +22,7 @@ Theming
 
 Optional Utils
 - powerline: Status bar for Bash. For example, it shows you what Git repo you are in
-- kava, neofetch, lolcat, cowsay, wisdom-mod, bash-pipes, cbonsai: important stuff
+- cava, neofetch, lolcat, cowsay, wisdom-mod, bash-pipes, cbonsai: important stuff
 - bpytop: resource monitor
 - nm-applet: manage your (wireless) connections and has a tray icon
 - kalu-kde: Notifies you about Arch news or updates and has a tray icon
